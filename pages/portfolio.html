@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV. Langgan Jaya Abadi | Steel Fabrication & Construction</title>
+  <meta name="description" content="CV. Langgan Jaya Abadi – Professional steel fabrication, construction, and maintenance services since 2004. Trusted by major industrial clients across Indonesia and internationally." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+
+</head>
+<body>
+
+
+<!-- ===================== NAVBAR ===================== -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+
+    <!-- Logo -->
+    <a href="../index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-lg leading-none">LJA</div>
+      <div class="leading-tight">
+        <div class="text-white font-display font-bold text-lg leading-none tracking-wide">LANGGAN JAYA</div>
+        <div class="text-blue-400 text-xs font-medium tracking-widest">ABADI</div>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-7 text-sm text-slate-300">
+      <a href="services.html" class="nav-link hover:text-white transition" data-id="Services" data-en="Services" data-id-text="Layanan">Layanan</a>
+      <a href="about.html" class="nav-link hover:text-white transition" data-en="About" data-id-text="Tentang Kami">Tentang Kami</a>
+      <a href="portfolio.html" class="nav-link hover:text-white transition" data-en="Portfolio" data-id-text="Portofolio">Portofolio</a>
+      <a href="../index.html#pricing" class="nav-link hover:text-white transition" data-en="Pricing" data-id-text="Harga">Harga</a>
+      <a href="../index.html#testimonials" class="nav-link hover:text-white transition" data-en="Reviews" data-id-text="Testimoni">Testimoni</a>
+      <a href="../index.html#faq" class="nav-link hover:text-white transition" data-en="FAQ" data-id-text="FAQ">FAQ</a>
+      <a href="contact.html" class="nav-link hover:text-white transition" data-en="Contact" data-id-text="Kontak">Kontak</a>
+    </nav>
+
+    <!-- Right Controls -->
+    <div class="flex items-center gap-3">
+      <!-- Language Toggle -->
+      <div class="hidden md:flex items-center bg-slate-800 rounded-full p-1 text-xs font-semibold">
+        <button onclick="setLang('id')" id="btn-id" class="lang-btn active px-3 py-1 rounded-full transition">ID</button>
+        <button onclick="setLang('en')" id="btn-en" class="lang-btn px-3 py-1 rounded-full text-slate-400 transition">EN</button>
+      </div>
+      <a href="contact.html" class="hidden md:flex bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-full text-sm transition items-center gap-2">
+        <span>Konsultasi Gratis</span>
+      </a>
+      <!-- Hamburger -->
+      <button id="menu-toggle" class="lg:hidden text-white p-2" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-slate-950 border-t border-white/10 px-6 py-4 space-y-3 text-sm text-slate-300">
+    <a href="services.html" class="block py-2 hover:text-white" onclick="toggleMenu()">Layanan</a>
+    <a href="about.html" class="block py-2 hover:text-white" onclick="toggleMenu()">Tentang Kami</a>
+    <a href="portfolio.html" class="block py-2 hover:text-white" onclick="toggleMenu()">Portofolio</a>
+    <a href="../index.html#pricing" class="block py-2 hover:text-white" onclick="toggleMenu()">Harga</a>
+    <a href="../index.html#testimonials" class="block py-2 hover:text-white" onclick="toggleMenu()">Testimoni</a>
+    <a href="../index.html#faq" class="block py-2 hover:text-white" onclick="toggleMenu()">FAQ</a>
+    <a href="contact.html" class="block py-2 hover:text-white" onclick="toggleMenu()">Kontak</a>
+    <div class="flex gap-2 pt-2">
+      <button onclick="setLang('id')" id="btn-id-m" class="lang-btn active px-4 py-2 rounded-full bg-slate-800 text-xs font-bold">ID</button>
+      <button onclick="setLang('en')" id="btn-en-m" class="lang-btn px-4 py-2 rounded-full bg-slate-800 text-slate-400 text-xs font-bold">EN</button>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="pt-20"></div>
+<!-- ===================== PORTFOLIO ===================== -->
+<section id="portfolio" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <span class="text-blue-600 font-semibold text-sm tracking-widest uppercase" data-id="HASIL KERJA KAMI" data-en="OUR WORK">HASIL KERJA KAMI</span>
+      <h2 class="mt-2 text-4xl md:text-5xl font-extrabold uppercase" data-id="PORTOFOLIO PROYEK" data-en="PROJECT PORTFOLIO">PORTOFOLIO PROYEK</h2>
+      <p class="mt-4 text-slate-500 max-w-lg mx-auto" data-id="Sebagian dari ratusan proyek yang telah kami selesaikan dengan standar kualitas dan keselamatan tertinggi." data-en="A selection of the hundreds of projects we have completed with the highest standards of quality and safety.">
+        Sebagian dari ratusan proyek yang telah kami selesaikan dengan standar kualitas dan keselamatan tertinggi.
+      </p>
+
+      <!-- Filter buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mt-8">
+        <button class="filter-btn active bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold" data-filter="all">All</button>
+        <button class="filter-btn bg-white border border-slate-200 text-slate-600 px-5 py-2 rounded-full text-sm font-semibold hover:bg-slate-100" data-filter="construction" data-id="Konstruksi" data-en="Construction">Konstruksi</button>
+        <button class="filter-btn bg-white border border-slate-200 text-slate-600 px-5 py-2 rounded-full text-sm font-semibold hover:bg-slate-100" data-filter="fabrication" data-id="Fabrikasi" data-en="Fabrication">Fabrikasi</button>
+        <button class="filter-btn bg-white border border-slate-200 text-slate-600 px-5 py-2 rounded-full text-sm font-semibold hover:bg-slate-100" data-filter="maintenance" data-id="Maintenance" data-en="Maintenance">Maintenance</button>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+
+      <div class="portfolio-item fabrication card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
+        <div class="relative overflow-hidden">
+          <img src="../assets/images/portfolio/steel_structure_kalimantan.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Proyek Konstruksi" />
+          <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Konstruksi" data-en="Construction">Konstruksi</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display font-bold text-xl uppercase text-slate-900" data-id="Steel Structure — Kalimantan" data-en="Steel Structure — Kalimantan">Steel Structure — Kalimantan</h3>
+          <p class="mt-2 text-slate-500 text-sm" data-id="Pembangunan gudang baja seluas 5.000 m² untuk plant pertambangan di Kaltim." data-en="Construction of a 5,000 m² steel warehouse for a mining plant in East Kalimantan.">Pembangunan gudang baja seluas 5.000 m² untuk plant pertambangan di Kaltim.</p>
+          <div class="mt-4 flex gap-2 text-xs text-slate-400">
+            <span class="bg-slate-100 px-2 py-1 rounded">2023</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">Mining</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item fabrication card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
+        <div class="relative overflow-hidden">
+          <img src="../assets/images/portfolio/tank_fabrication_sumatra.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Fabrikasi" />
+          <span class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Fabrikasi" data-en="Fabrication">Fabrikasi</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display font-bold text-xl uppercase text-slate-900" data-id="Tank Fabrication — Sumatra" data-en="Tank Fabrication — Sumatra">Tank Fabrication — Sumatra</h3>
+          <p class="mt-2 text-slate-500 text-sm" data-id="Fabrikasi tangki penyimpanan baja untuk fasilitas migas di Sumatra Selatan." data-en="Steel storage tank fabrication for an oil & gas facility in South Sumatra.">Fabrikasi tangki penyimpanan baja untuk fasilitas migas di Sumatra Selatan.</p>
+          <div class="mt-4 flex gap-2 text-xs text-slate-400">
+            <span class="bg-slate-100 px-2 py-1 rounded">2022</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">Oil & Gas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item maintenance card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
+        <div class="relative overflow-hidden">
+          <img src="../assets/images/portfolio/plant_shutdown_sulawesi.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Maintenance" />
+          <span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Maintenance" data-en="Maintenance">Maintenance</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display font-bold text-xl uppercase text-slate-900" data-id="Plant Shutdown — Sulawesi" data-en="Plant Shutdown — Sulawesi">Plant Shutdown — Sulawesi</h3>
+          <p class="mt-2 text-slate-500 text-sm" data-id="Pemeliharaan menyeluruh plant smelter selama turnaround tahunan 30 hari." data-en="Comprehensive smelter plant maintenance during annual 30-day turnaround.">Pemeliharaan menyeluruh plant smelter selama turnaround tahunan 30 hari.</p>
+          <div class="mt-4 flex gap-2 text-xs text-slate-400">
+            <span class="bg-slate-100 px-2 py-1 rounded">2024</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">Mining</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item construction card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
+        <div class="relative overflow-hidden">
+          <img src="../assets/images/portfolio/industrial_access_bridge.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Bridge" />
+          <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Konstruksi" data-en="Construction">Konstruksi</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display font-bold text-xl uppercase text-slate-900" data-id="Jembatan Akses Industri" data-en="Industrial Access Bridge">Jembatan Akses Industri</h3>
+          <p class="mt-2 text-slate-500 text-sm" data-id="Konstruksi jembatan baja akses berat untuk kawasan industri di Jawa Barat." data-en="Heavy-load steel bridge construction for industrial area in West Java.">Konstruksi jembatan baja akses berat untuk kawasan industri di Jawa Barat.</p>
+          <div class="mt-4 flex gap-2 text-xs text-slate-400">
+            <span class="bg-slate-100 px-2 py-1 rounded">2023</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">Infrastructure</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item fabrication card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
+        <div class="relative overflow-hidden">
+          <img src="../assets/images/portfolio/precision_components.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Precision fab" />
+          <span class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Fabrikasi" data-en="Fabrication">Fabrikasi</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display font-bold text-xl uppercase text-slate-900" data-id="Precision Components — International" data-en="Precision Components — International">Precision Components — Int'l</h3>
+          <p class="mt-2 text-slate-500 text-sm" data-id="Ekspor komponen baja presisi ke klien di Malaysia dan Brunei." data-en="Export of precision steel components to clients in Malaysia and Brunei.">Ekspor komponen baja presisi ke klien di Malaysia dan Brunei.</p>
+          <div class="mt-4 flex gap-2 text-xs text-slate-400">
+            <span class="bg-slate-100 px-2 py-1 rounded">2024</span>
+            <span class="bg-slate-100 px-2 py-1 rounded">International</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item maintenance card-hover bg-slate-900 text-white rounded-2xl overflow-hidden relative flex items-end min-h-[340px]" style="background: url('../assets/images/portfolio/offshore_platform_repair.jpg') center/cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+        <div class="relative p-6 w-full">
+          <span class="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Maintenance" data-en="Maintenance">Maintenance</span>
+          <h3 class="font-display font-bold text-xl uppercase mt-3" data-id="Offshore Platform Repair" data-en="Offshore Platform Repair">Offshore Platform Repair</h3>
+          <p class="mt-2 text-slate-300 text-sm" data-id="Perbaikan dan penguatan struktur platform lepas pantai di perairan Kalimantan." data-en="Repair and reinforcement of offshore platform structure in Kalimantan waters.">Perbaikan dan penguatan struktur platform lepas pantai di perairan Kalimantan.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="contact.html" class="inline-flex items-center gap-2 border border-slate-300 hover:border-blue-400 text-slate-700 hover:text-blue-600 font-semibold px-8 py-3 rounded-xl transition" data-id="Lihat Semua Proyek →" data-en="See All Projects →">Lihat Semua Proyek →</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-slate-950 border-t border-white/5 text-slate-400 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-10 pb-12 border-b border-white/5">
+
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-lg">LJA</div>
+          <div>
+            <div class="text-white font-display font-bold text-lg leading-none">LANGGAN JAYA ABADI</div>
+            <div class="text-blue-400 text-xs tracking-widest">STEEL · FABRICATION · CONSTRUCTION</div>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed max-w-xs" data-id="Perusahaan jasa konstruksi baja, fabrikasi, dan maintenance profesional. Berdiri sejak 2004. Melayani seluruh Indonesia dan internasional." data-en="Professional steel construction, fabrication, and maintenance services company. Established since 2004. Serving all of Indonesia and internationally.">
+          Perusahaan jasa konstruksi baja, fabrikasi, dan maintenance profesional. Berdiri sejak 2004. Melayani seluruh Indonesia dan internasional.
+        </p>
+      </div>
+
+      <div>
+        <div class="text-white font-semibold text-sm mb-4 uppercase tracking-wide" data-id="Layanan" data-en="Services">Layanan</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="services.html" class="hover:text-white transition" data-id="Tower Telekomunikasi" data-en="Telecom Tower">Tower Telekomunikasi</a></li>
+          <li><a href="services.html" class="hover:text-white transition" data-id="Mobile Tower" data-en="Mobile Tower">Mobile Tower</a></li>
+          <li><a href="services.html" class="hover:text-white transition" data-id="Tanki Bahan Bakar / Air" data-en="Fuel / Water Tank">Tanki Bahan Bakar / Air</a></li>
+          <li><a href="services.html" class="hover:text-white transition" data-id="Konstruksi Baja" data-en="Steel Construction">Konstruksi Baja</a></li>
+          <li><a href="services.html" class="hover:text-white transition" data-id="Modifikasi Container" data-en="Container Modification">Modifikasi Container</a></li>
+          <li><a href="services.html" class="hover:text-white transition" data-id="Tipping Unit" data-en="Tipping Unit">Tipping Unit</a></li>
+          <li><a href="services.html" class="hover:text-white transition" data-id="Instalasi" data-en="Installation">Instalasi</a></li>
+          <li><a href="services.html" class="hover:text-white transition" data-id="Cutting Skip" data-en="Cutting Skip">Cutting Skip</a></li>
+          <li><a href="services.html" class="hover:text-white transition" data-id="Cargo Carrying Unit" data-en="Cargo Carrying Unit">Cargo Carrying Unit</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-white font-semibold text-sm mb-4 uppercase tracking-wide" data-id="Perusahaan" data-en="Company">Perusahaan</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="about.html" class="hover:text-white transition" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a></li>
+          <li><a href="portfolio.html" class="hover:text-white transition" data-id="Portofolio" data-en="Portfolio">Portofolio</a></li>
+          <li><a href="../index.html#testimonials" class="hover:text-white transition" data-id="Testimoni" data-en="Testimonials">Testimoni</a></li>
+          <li><a href="../index.html#faq" class="hover:text-white transition">FAQ</a></li>
+          <li><a href="contact.html" class="hover:text-white transition" data-id="Kontak" data-en="Contact">Kontak</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <p>© 2026 CV. Langgan Jaya Abadi. <span data-id="Hak cipta dilindungi." data-en="All rights reserved.">Hak cipta dilindungi.</span></p>
+      <p data-id="Melayani seluruh Indonesia · Internasional" data-en="Serving all Indonesia · International">Melayani seluruh Indonesia · Internasional</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ===================== FLOATING WA BUTTON ===================== -->
+<a href="https://wa.me/6282132348699?text=Halo%20LJA%2C%20saya%20ingin%20konsultasi%20proyek" target="_blank"
+   class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-400 text-white rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
+   title="Chat WhatsApp">
+  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script src="../assets/js/language.js" defer></script>
+<script src="../assets/js/navbar.js" defer></script>
+<script src="../assets/js/services.js" defer></script>
+<script src="../assets/js/faq.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+
+
+</body>
+</html>

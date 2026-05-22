@@ -8,356 +8,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --steel-blue: #1e56a0;
-      --steel-blue-light: #3b82f6;
-      --metal-dark: #1a1f2e;
-      --metal-mid: #2d3748;
-      --metal-grey: #64748b;
-      --metal-light: #94a3b8;
-      --accent: #e8b84b;
-      --surface: #f8fafc;
-    }
-
-    * { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Barlow', sans-serif;
-      background: var(--surface);
-      color: #1e293b;
-    }
-
-    h1, h2, h3, .font-display {
-      font-family: 'Barlow Condensed', sans-serif;
-    }
-
-    /* Metal texture overlay */
-    .metal-texture {
-      background-image:
-        repeating-linear-gradient(
-          90deg,
-          transparent,
-          transparent 2px,
-          rgba(255,255,255,0.012) 2px,
-          rgba(255,255,255,0.012) 4px
-        ),
-        linear-gradient(135deg, #0f1622 0%, #1a2540 40%, #0d1520 100%);
-    }
-
-    .hero-bg {
-      background:
-        radial-gradient(ellipse at 80% 0%, rgba(30,86,160,0.35) 0%, transparent 55%),
-        radial-gradient(ellipse at 0% 100%, rgba(100,116,139,0.2) 0%, transparent 50%),
-        repeating-linear-gradient(
-          0deg,
-          transparent,
-          transparent 60px,
-          rgba(255,255,255,0.015) 60px,
-          rgba(255,255,255,0.015) 61px
-        ),
-        linear-gradient(160deg, #0d1520 0%, #0f1e35 50%, #121a28 100%);
-    }
-
-    .steel-border {
-      border: 1px solid rgba(59,130,246,0.25);
-    }
-
-    .card-hover {
-      transition: all 0.3s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 60px rgba(30,86,160,0.2);
-    }
-
-    .service-card:hover .service-icon {
-      transform: scale(1.1) rotate(5deg);
-      transition: transform 0.3s ease;
-    }
-
-    /* Diagonal section divider */
-    .diagonal-top {
-      clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
-      margin-top: -40px;
-      padding-top: 80px;
-    }
-    .diagonal-bottom {
-      clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0 100%);
-      padding-bottom: 80px;
-    }
-
-    /* Progress bar animation */
-    .bar-fill {
-      animation: fillBar 1.5s ease forwards;
-      transform-origin: left;
-    }
-    @keyframes fillBar {
-      from { transform: scaleX(0); }
-      to { transform: scaleX(1); }
-    }
-
-    /* Floating badge animation */
-    @keyframes floatUp {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
-    .float-badge { animation: floatUp 3s ease-in-out infinite; }
-
-    /* Counter animation */
-    .stat-number {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-    }
-
-    /* Navbar active state */
-    .nav-link {
-      position: relative;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--steel-blue-light);
-      transition: width 0.3s ease;
-    }
-    .nav-link:hover::after { width: 100%; }
-
-    /* Mobile menu */
-    #mobile-menu {
-      transition: all 0.3s ease;
-    }
-
-    /* Language toggle */
-    .lang-btn.active {
-      background: var(--steel-blue);
-      color: white;
-    }
-
-    /* Grid pattern background */
-    .grid-pattern {
-      background-image:
-        linear-gradient(rgba(59,130,246,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,130,246,0.05) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #0f1622; }
-    ::-webkit-scrollbar-thumb { background: var(--steel-blue); border-radius: 3px; }
-
-    /* FAQ accordion */
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-    .faq-item.open .faq-answer {
-      max-height: 300px;
-    }
-    .faq-item.open .faq-icon {
-      transform: rotate(45deg);
-    }
-    .faq-icon {
-      transition: transform 0.3s ease;
-    }
-
-    /* Testimonial card */
-    .testimonial-scroll {
-      display: flex;
-      gap: 1.5rem;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      padding-bottom: 1rem;
-    }
-    .testimonial-scroll::-webkit-scrollbar { display: none; }
-    .testimonial-card { scroll-snap-align: start; }
-
-    /* Steel gradient text */
-    .text-gradient {
-      background: linear-gradient(135deg, #60a5fa, #93c5fd);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .text-gold {
-      background: linear-gradient(135deg, #e8b84b, #f5d87a);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Pulse dot */
-    @keyframes pulse-ring {
-      0% { transform: scale(1); opacity: 0.6; }
-      100% { transform: scale(2); opacity: 0; }
-    }
-    .pulse-dot::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: #22c55e;
-      animation: pulse-ring 1.5s ease-out infinite;
-    }
-
-    /* ===== INTERACTIVE SERVICE SHOWCASE ===== */
-    .service-tab {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.1rem 1.25rem;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: #0f1622;
-      color: #94a3b8;
-      cursor: pointer;
-      text-align: left;
-      width: 100%;
-      transition: all 0.25s ease;
-      overflow: hidden;
-    }
-    .service-tab::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 3px;
-      background: var(--steel-blue-light);
-      border-radius: 2px 0 0 2px;
-      transform: scaleY(0);
-      transition: transform 0.25s ease;
-    }
-    .service-tab:hover {
-      background: #1a2540;
-      color: #cbd5e1;
-      border-color: rgba(59,130,246,0.2);
-    }
-    .service-tab.active {
-      background: #1a2540;
-      color: #fff;
-      border-color: rgba(59,130,246,0.35);
-      box-shadow: 0 0 0 1px rgba(59,130,246,0.15), 4px 0 20px rgba(59,130,246,0.08) inset;
-    }
-    .service-tab.active::before {
-      transform: scaleY(1);
-    }
-    .service-tab .tab-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: var(--steel-blue-light);
-      opacity: 0.5;
-      letter-spacing: 0.05em;
-      min-width: 20px;
-    }
-    .service-tab.active .tab-num { opacity: 1; }
-    .service-tab .tab-icon {
-      font-size: 1.4rem;
-      min-width: 32px;
-      text-align: center;
-      transition: transform 0.25s ease;
-    }
-    .service-tab:hover .tab-icon,
-    .service-tab.active .tab-icon {
-      transform: scale(1.1);
-    }
-    .service-tab .tab-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      line-height: 1.2;
-    }
-    .service-tab .tab-sub {
-      font-size: 0.7rem;
-      color: #64748b;
-      margin-top: 2px;
-      transition: color 0.25s;
-    }
-    .service-tab.active .tab-sub,
-    .service-tab:hover .tab-sub {
-      color: #94a3b8;
-    }
-    .service-tab .tab-arrow {
-      margin-left: auto;
-      color: #3b82f6;
-      opacity: 0;
-      transform: translateX(-6px);
-      transition: all 0.25s ease;
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-    .service-tab.active .tab-arrow,
-    .service-tab:hover .tab-arrow {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    /* Preview panel */
-    .svc-preview-wrap {
-      position: relative;
-      min-height: 560px;
-    }
-    .svc-preview-item {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(10px);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-    }
-    .svc-preview-item.active {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-      position: relative;
-    }
-
-    /* Mobile tabs (horizontal scroll) */
-    @media (max-width: 1023px) {
-      .service-tabs-mobile {
-        display: flex;
-        gap: 0.5rem;
-        overflow-x: auto;
-        scrollbar-width: none;
-        padding-bottom: 0.25rem;
-        scroll-snap-type: x mandatory;
-      }
-      .service-tabs-mobile::-webkit-scrollbar { display: none; }
-      .service-tab-mobile {
-        flex-shrink: 0;
-        scroll-snap-align: start;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.6rem 1rem;
-        border-radius: 100px;
-        border: 1px solid rgba(255,255,255,0.08);
-        background: #0f1622;
-        color: #64748b;
-        cursor: pointer;
-        white-space: nowrap;
-        font-size: 0.75rem;
-        font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        transition: all 0.2s ease;
-      }
-      .service-tab-mobile.active {
-        background: var(--steel-blue);
-        color: #fff;
-        border-color: var(--steel-blue);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
 
@@ -366,7 +19,7 @@
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
 
     <!-- Logo -->
-    <a href="#home" class="flex items-center gap-3">
+    <a href="index.html" class="flex items-center gap-3">
       <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-lg leading-none">LJA</div>
       <div class="leading-tight">
         <div class="text-white font-display font-bold text-lg leading-none tracking-wide">LANGGAN JAYA</div>
@@ -376,13 +29,13 @@
 
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center gap-7 text-sm text-slate-300">
-      <a href="#services" class="nav-link hover:text-white transition" data-id="Services" data-en="Services" data-id-text="Layanan">Layanan</a>
-      <a href="#about" class="nav-link hover:text-white transition" data-en="About" data-id-text="Tentang Kami">Tentang Kami</a>
-      <a href="#portfolio" class="nav-link hover:text-white transition" data-en="Portfolio" data-id-text="Portofolio">Portofolio</a>
+      <a href="pages/services.html" class="nav-link hover:text-white transition" data-id="Services" data-en="Services" data-id-text="Layanan">Layanan</a>
+      <a href="pages/about.html" class="nav-link hover:text-white transition" data-en="About" data-id-text="Tentang Kami">Tentang Kami</a>
+      <a href="pages/portfolio.html" class="nav-link hover:text-white transition" data-en="Portfolio" data-id-text="Portofolio">Portofolio</a>
       <a href="#pricing" class="nav-link hover:text-white transition" data-en="Pricing" data-id-text="Harga">Harga</a>
       <a href="#testimonials" class="nav-link hover:text-white transition" data-en="Reviews" data-id-text="Testimoni">Testimoni</a>
       <a href="#faq" class="nav-link hover:text-white transition" data-en="FAQ" data-id-text="FAQ">FAQ</a>
-      <a href="#contact" class="nav-link hover:text-white transition" data-en="Contact" data-id-text="Kontak">Kontak</a>
+      <a href="pages/contact.html" class="nav-link hover:text-white transition" data-en="Contact" data-id-text="Kontak">Kontak</a>
     </nav>
 
     <!-- Right Controls -->
@@ -392,7 +45,7 @@
         <button onclick="setLang('id')" id="btn-id" class="lang-btn active px-3 py-1 rounded-full transition">ID</button>
         <button onclick="setLang('en')" id="btn-en" class="lang-btn px-3 py-1 rounded-full text-slate-400 transition">EN</button>
       </div>
-      <a href="#contact" class="hidden md:flex bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-full text-sm transition items-center gap-2">
+      <a href="pages/contact.html" class="hidden md:flex bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-full text-sm transition items-center gap-2">
         <span>Konsultasi Gratis</span>
       </a>
       <!-- Hamburger -->
@@ -406,13 +59,13 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden lg:hidden bg-slate-950 border-t border-white/10 px-6 py-4 space-y-3 text-sm text-slate-300">
-    <a href="#services" class="block py-2 hover:text-white" onclick="toggleMenu()">Layanan</a>
-    <a href="#about" class="block py-2 hover:text-white" onclick="toggleMenu()">Tentang Kami</a>
-    <a href="#portfolio" class="block py-2 hover:text-white" onclick="toggleMenu()">Portofolio</a>
+    <a href="pages/services.html" class="block py-2 hover:text-white" onclick="toggleMenu()">Layanan</a>
+    <a href="pages/about.html" class="block py-2 hover:text-white" onclick="toggleMenu()">Tentang Kami</a>
+    <a href="pages/portfolio.html" class="block py-2 hover:text-white" onclick="toggleMenu()">Portofolio</a>
     <a href="#pricing" class="block py-2 hover:text-white" onclick="toggleMenu()">Harga</a>
     <a href="#testimonials" class="block py-2 hover:text-white" onclick="toggleMenu()">Testimoni</a>
     <a href="#faq" class="block py-2 hover:text-white" onclick="toggleMenu()">FAQ</a>
-    <a href="#contact" class="block py-2 hover:text-white" onclick="toggleMenu()">Kontak</a>
+    <a href="pages/contact.html" class="block py-2 hover:text-white" onclick="toggleMenu()">Kontak</a>
     <div class="flex gap-2 pt-2">
       <button onclick="setLang('id')" id="btn-id-m" class="lang-btn active px-4 py-2 rounded-full bg-slate-800 text-xs font-bold">ID</button>
       <button onclick="setLang('en')" id="btn-en-m" class="lang-btn px-4 py-2 rounded-full bg-slate-800 text-slate-400 text-xs font-bold">EN</button>
@@ -460,10 +113,10 @@
       </p>
 
       <div class="mt-8 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl text-sm tracking-wide transition shadow-lg shadow-blue-900/50" data-id="Minta Penawaran Gratis" data-en="Get Free Quote">
+        <a href="pages/contact.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl text-sm tracking-wide transition shadow-lg shadow-blue-900/50" data-id="Minta Penawaran Gratis" data-en="Get Free Quote">
           Minta Penawaran Gratis
         </a>
-        <a href="#portfolio" class="border border-white/20 hover:border-blue-400 hover:bg-blue-950/40 text-white font-semibold px-8 py-4 rounded-xl text-sm tracking-wide transition flex items-center gap-2" data-id="Lihat Portofolio" data-en="View Portfolio">
+        <a href="pages/portfolio.html" class="border border-white/20 hover:border-blue-400 hover:bg-blue-950/40 text-white font-semibold px-8 py-4 rounded-xl text-sm tracking-wide transition flex items-center gap-2" data-id="Lihat Portofolio" data-en="View Portfolio">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           <span data-id="Lihat Portofolio" data-en="View Portfolio">Lihat Portofolio</span>
         </a>
@@ -665,7 +318,7 @@
 
         <!-- CTA bottom -->
         <div class="mt-auto pt-3 border-t border-white/5">
-          <a href="#contact" class="flex items-center justify-between gap-3 w-full px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold font-display uppercase tracking-wide transition group">
+          <a href="pages/contact.html" class="flex items-center justify-between gap-3 w-full px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold font-display uppercase tracking-wide transition group">
             <span data-id="Butuh Solusi Custom? Diskusi Sekarang" data-en="Need Custom Solution? Discuss Now">Butuh Solusi Custom? Diskusi Sekarang</span>
             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
@@ -696,7 +349,7 @@
               <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Sesuai Standar Telko Nasional" data-en="Per National Telco Standards">Sesuai Standar Telko Nasional</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="pages/contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -725,7 +378,7 @@
               <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Custom Tinggi & Spesifikasi" data-en="Custom Height & Specifications">Custom Tinggi & Spesifikasi</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="pages/contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -754,7 +407,7 @@
               <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Horizontal & Vertikal" data-en="Horizontal & Vertical">Horizontal & Vertikal</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="pages/contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -783,7 +436,7 @@
               <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Standar SNI & International" data-en="SNI & International Standards">Standar SNI & International</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="pages/contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -812,7 +465,7 @@
               <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Custom Layout Sesuai Kebutuhan" data-en="Custom Layout per Requirements">Custom Layout Sesuai Kebutuhan</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="pages/contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -841,7 +494,7 @@
               <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Coating Anti-Karat & Abrasif" data-en="Anti-Rust & Abrasion Coating">Coating Anti-Karat & Abrasif</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="pages/contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -870,7 +523,7 @@
               <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Standar K3 & HSE" data-en="K3 & HSE Standards">Standar K3 & HSE</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="pages/contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -899,7 +552,7 @@
               <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Finishing Sandblast & Cat" data-en="Sandblast & Paint Finishing">Finishing Sandblast & Cat</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="pages/contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -928,7 +581,7 @@
               <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Certified & Third Party Inspection" data-en="Certified & Third Party Inspection">Certified & Third Party Inspection</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="pages/contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -943,7 +596,7 @@
 
     <!-- Mobile CTA -->
     <div class="lg:hidden mt-5">
-      <a href="#contact" class="flex items-center justify-center gap-2 w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-sm transition">
+      <a href="pages/contact.html" class="flex items-center justify-center gap-2 w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-sm transition">
         <span data-id="Butuh Solusi Custom? Diskusi Sekarang" data-en="Need Custom Solution? Discuss Now">Butuh Solusi Custom? Diskusi Sekarang</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
@@ -999,8 +652,8 @@
       </div>
 
       <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-blue-600 hover:bg-blue-500 font-bold px-7 py-3 rounded-xl text-sm transition" data-id="Hubungi Tim Kami" data-en="Contact Our Team">Hubungi Tim Kami</a>
-        <a href="#portfolio" class="border border-white/20 hover:bg-white/10 font-semibold px-7 py-3 rounded-xl text-sm transition" data-id="Lihat Proyek Kami" data-en="See Our Projects">Lihat Proyek Kami</a>
+        <a href="pages/contact.html" class="bg-blue-600 hover:bg-blue-500 font-bold px-7 py-3 rounded-xl text-sm transition" data-id="Hubungi Tim Kami" data-en="Contact Our Team">Hubungi Tim Kami</a>
+        <a href="pages/portfolio.html" class="border border-white/20 hover:bg-white/10 font-semibold px-7 py-3 rounded-xl text-sm transition" data-id="Lihat Proyek Kami" data-en="See Our Projects">Lihat Proyek Kami</a>
       </div>
     </div>
   </div>
@@ -1030,7 +683,7 @@
 
       <div class="portfolio-item fabrication card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
         <div class="relative overflow-hidden">
-          <img src="PLACEHOLDER_IMG" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Proyek Konstruksi" />
+          <img src="assets/images/portfolio/steel_structure_kalimantan.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Proyek Konstruksi" />
           <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Konstruksi" data-en="Construction">Konstruksi</span>
         </div>
         <div class="p-6">
@@ -1045,7 +698,7 @@
 
       <div class="portfolio-item fabrication card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
         <div class="relative overflow-hidden">
-          <img src="PLACEHOLDER_IMG" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Fabrikasi" />
+          <img src="assets/images/portfolio/tank_fabrication_sumatra.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Fabrikasi" />
           <span class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Fabrikasi" data-en="Fabrication">Fabrikasi</span>
         </div>
         <div class="p-6">
@@ -1060,7 +713,7 @@
 
       <div class="portfolio-item maintenance card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
         <div class="relative overflow-hidden">
-          <img src="PLACEHOLDER_IMG" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Maintenance" />
+          <img src="assets/images/portfolio/plant_shutdown_sulawesi.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Maintenance" />
           <span class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Maintenance" data-en="Maintenance">Maintenance</span>
         </div>
         <div class="p-6">
@@ -1075,7 +728,7 @@
 
       <div class="portfolio-item construction card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
         <div class="relative overflow-hidden">
-          <img src="PLACEHOLDER_IMG" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Bridge" />
+          <img src="assets/images/portfolio/industrial_access_bridge.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Bridge" />
           <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Konstruksi" data-en="Construction">Konstruksi</span>
         </div>
         <div class="p-6">
@@ -1090,7 +743,7 @@
 
       <div class="portfolio-item fabrication card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
         <div class="relative overflow-hidden">
-          <img src="PLACEHOLDER_IMG" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Precision fab" />
+          <img src="assets/images/portfolio/precision_components.jpg" class="h-56 w-full object-cover hover:scale-105 transition-transform duration-500" alt="Precision fab" />
           <span class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Fabrikasi" data-en="Fabrication">Fabrikasi</span>
         </div>
         <div class="p-6">
@@ -1103,7 +756,7 @@
         </div>
       </div>
 
-      <div class="portfolio-item maintenance card-hover bg-slate-900 text-white rounded-2xl overflow-hidden relative flex items-end min-h-[340px]" style="background: url('PLACEHOLDER_IMG') center/cover">
+      <div class="portfolio-item maintenance card-hover bg-slate-900 text-white rounded-2xl overflow-hidden relative flex items-end min-h-[340px]" style="background: url('assets/images/portfolio/offshore_platform_repair.jpg') center/cover">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
         <div class="relative p-6 w-full">
           <span class="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase" data-id="Maintenance" data-en="Maintenance">Maintenance</span>
@@ -1115,7 +768,7 @@
     </div>
 
     <div class="text-center mt-12">
-      <a href="#contact" class="inline-flex items-center gap-2 border border-slate-300 hover:border-blue-400 text-slate-700 hover:text-blue-600 font-semibold px-8 py-3 rounded-xl transition" data-id="Lihat Semua Proyek →" data-en="See All Projects →">Lihat Semua Proyek →</a>
+      <a href="pages/contact.html" class="inline-flex items-center gap-2 border border-slate-300 hover:border-blue-400 text-slate-700 hover:text-blue-600 font-semibold px-8 py-3 rounded-xl transition" data-id="Lihat Semua Proyek →" data-en="See All Projects →">Lihat Semua Proyek →</a>
     </div>
   </div>
 </section>
@@ -1200,7 +853,7 @@
           <li class="flex gap-2"><span class="text-green-500">✓</span> <span data-id="Site survey & laporan" data-en="Site survey & report">Site survey & laporan</span></li>
           <li class="flex gap-2"><span class="text-green-500">✓</span> <span data-id="Garansi 1 tahun" data-en="1-year warranty">Garansi 1 tahun</span></li>
         </ul>
-        <a href="#contact" class="mt-8 w-full block text-center border border-slate-300 hover:border-blue-500 hover:bg-blue-50 text-slate-700 hover:text-blue-700 font-bold py-3 rounded-xl transition text-sm" data-id="Minta Penawaran" data-en="Request Quote">Minta Penawaran</a>
+        <a href="pages/contact.html" class="mt-8 w-full block text-center border border-slate-300 hover:border-blue-500 hover:bg-blue-50 text-slate-700 hover:text-blue-700 font-bold py-3 rounded-xl transition text-sm" data-id="Minta Penawaran" data-en="Request Quote">Minta Penawaran</a>
       </div>
 
       <!-- Professional (featured) -->
@@ -1220,7 +873,7 @@
           <li class="flex gap-2"><span class="text-blue-400">✓</span> <span data-id="Tim K3 dedicated" data-en="Dedicated K3 team">Tim K3 dedicated</span></li>
           <li class="flex gap-2"><span class="text-blue-400">✓</span> <span data-id="Garansi 2 tahun" data-en="2-year warranty">Garansi 2 tahun</span></li>
         </ul>
-        <a href="#contact" class="mt-8 w-full block text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl transition text-sm" data-id="Minta Penawaran" data-en="Request Quote">Minta Penawaran</a>
+        <a href="pages/contact.html" class="mt-8 w-full block text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl transition text-sm" data-id="Minta Penawaran" data-en="Request Quote">Minta Penawaran</a>
       </div>
 
       <!-- Enterprise -->
@@ -1239,7 +892,7 @@
           <li class="flex gap-2"><span class="text-green-500">✓</span> <span data-id="SLA & priority support" data-en="SLA & priority support">SLA & priority support</span></li>
           <li class="flex gap-2"><span class="text-green-500">✓</span> <span data-id="Garansi 5 tahun" data-en="5-year warranty">Garansi 5 tahun</span></li>
         </ul>
-        <a href="#contact" class="mt-8 w-full block text-center border border-slate-300 hover:border-blue-500 hover:bg-blue-50 text-slate-700 hover:text-blue-700 font-bold py-3 rounded-xl transition text-sm" data-id="Hubungi Kami" data-en="Contact Us">Hubungi Kami</a>
+        <a href="pages/contact.html" class="mt-8 w-full block text-center border border-slate-300 hover:border-blue-500 hover:bg-blue-50 text-slate-700 hover:text-blue-700 font-bold py-3 rounded-xl transition text-sm" data-id="Hubungi Kami" data-en="Contact Us">Hubungi Kami</a>
       </div>
 
     </div>
@@ -1525,26 +1178,26 @@
       <div>
         <div class="text-white font-semibold text-sm mb-4 uppercase tracking-wide" data-id="Layanan" data-en="Services">Layanan</div>
         <ul class="space-y-2 text-sm">
-          <li><a href="#services" class="hover:text-white transition" data-id="Tower Telekomunikasi" data-en="Telecom Tower">Tower Telekomunikasi</a></li>
-          <li><a href="#services" class="hover:text-white transition" data-id="Mobile Tower" data-en="Mobile Tower">Mobile Tower</a></li>
-          <li><a href="#services" class="hover:text-white transition" data-id="Tanki Bahan Bakar / Air" data-en="Fuel / Water Tank">Tanki Bahan Bakar / Air</a></li>
-          <li><a href="#services" class="hover:text-white transition" data-id="Konstruksi Baja" data-en="Steel Construction">Konstruksi Baja</a></li>
-          <li><a href="#services" class="hover:text-white transition" data-id="Modifikasi Container" data-en="Container Modification">Modifikasi Container</a></li>
-          <li><a href="#services" class="hover:text-white transition" data-id="Tipping Unit" data-en="Tipping Unit">Tipping Unit</a></li>
-          <li><a href="#services" class="hover:text-white transition" data-id="Instalasi" data-en="Installation">Instalasi</a></li>
-          <li><a href="#services" class="hover:text-white transition" data-id="Cutting Skip" data-en="Cutting Skip">Cutting Skip</a></li>
-          <li><a href="#services" class="hover:text-white transition" data-id="Cargo Carrying Unit" data-en="Cargo Carrying Unit">Cargo Carrying Unit</a></li>
+          <li><a href="pages/services.html" class="hover:text-white transition" data-id="Tower Telekomunikasi" data-en="Telecom Tower">Tower Telekomunikasi</a></li>
+          <li><a href="pages/services.html" class="hover:text-white transition" data-id="Mobile Tower" data-en="Mobile Tower">Mobile Tower</a></li>
+          <li><a href="pages/services.html" class="hover:text-white transition" data-id="Tanki Bahan Bakar / Air" data-en="Fuel / Water Tank">Tanki Bahan Bakar / Air</a></li>
+          <li><a href="pages/services.html" class="hover:text-white transition" data-id="Konstruksi Baja" data-en="Steel Construction">Konstruksi Baja</a></li>
+          <li><a href="pages/services.html" class="hover:text-white transition" data-id="Modifikasi Container" data-en="Container Modification">Modifikasi Container</a></li>
+          <li><a href="pages/services.html" class="hover:text-white transition" data-id="Tipping Unit" data-en="Tipping Unit">Tipping Unit</a></li>
+          <li><a href="pages/services.html" class="hover:text-white transition" data-id="Instalasi" data-en="Installation">Instalasi</a></li>
+          <li><a href="pages/services.html" class="hover:text-white transition" data-id="Cutting Skip" data-en="Cutting Skip">Cutting Skip</a></li>
+          <li><a href="pages/services.html" class="hover:text-white transition" data-id="Cargo Carrying Unit" data-en="Cargo Carrying Unit">Cargo Carrying Unit</a></li>
         </ul>
       </div>
 
       <div>
         <div class="text-white font-semibold text-sm mb-4 uppercase tracking-wide" data-id="Perusahaan" data-en="Company">Perusahaan</div>
         <ul class="space-y-2 text-sm">
-          <li><a href="#about" class="hover:text-white transition" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a></li>
-          <li><a href="#portfolio" class="hover:text-white transition" data-id="Portofolio" data-en="Portfolio">Portofolio</a></li>
+          <li><a href="pages/about.html" class="hover:text-white transition" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a></li>
+          <li><a href="pages/portfolio.html" class="hover:text-white transition" data-id="Portofolio" data-en="Portfolio">Portofolio</a></li>
           <li><a href="#testimonials" class="hover:text-white transition" data-id="Testimoni" data-en="Testimonials">Testimoni</a></li>
           <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
-          <li><a href="#contact" class="hover:text-white transition" data-id="Kontak" data-en="Contact">Kontak</a></li>
+          <li><a href="pages/contact.html" class="hover:text-white transition" data-id="Kontak" data-en="Contact">Kontak</a></li>
         </ul>
       </div>
 
@@ -1567,154 +1220,11 @@
 
 
 <!-- ===================== JAVASCRIPT ===================== -->
-<script>
-
-  // ---- Interactive Service Showcase ----
-  function selectService(index, clickedBtn) {
-    // Update desktop tab active states
-    document.querySelectorAll('#service-tabs-desktop .service-tab').forEach((tab, i) => {
-      tab.classList.toggle('active', i === index);
-    });
-
-    // Update mobile pill active states
-    document.querySelectorAll('.service-tab-mobile').forEach((tab, i) => {
-      tab.classList.toggle('active', i === index);
-    });
-
-    // Fade out current, fade in new preview
-    const previews = document.querySelectorAll('.svc-preview-item');
-    previews.forEach(p => p.classList.remove('active'));
-    const target = document.querySelector(`.svc-preview-item[data-index="${index}"]`);
-    if (target) {
-      // tiny RAF to ensure CSS transition fires
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => target.classList.add('active'));
-      });
-    }
-  }
-
-  // ---- Language toggle ----
-  let currentLang = 'id';
-
-  function setLang(lang) {
-    currentLang = lang;
-    document.documentElement.lang = lang === 'id' ? 'id' : 'en';
-
-    document.querySelectorAll('[data-en]').forEach(el => {
-      const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-id-text') || el.getAttribute('data-id');
-      if (text && el.tagName !== 'OPTION') el.textContent = text;
-      if (text && el.tagName === 'OPTION') el.textContent = text;
-    });
-
-    // Handle placeholder
-    document.querySelectorAll('[placeholder]').forEach(el => {
-      if (lang === 'en') {
-        if (!el._origPlaceholder) el._origPlaceholder = el.placeholder;
-      }
-    });
-
-    // Update consultation button
-    document.querySelectorAll('a[href="#contact"]').forEach(a => {
-      if (a.querySelector('span') && a.querySelector('span').textContent.includes('Konsultasi')) {
-        a.querySelector('span').textContent = lang === 'en' ? 'Free Consultation' : 'Konsultasi Gratis';
-      }
-    });
-
-    // Toggle active state on buttons
-    ['btn-id','btn-en','btn-id-m','btn-en-m'].forEach(id => {
-      const btn = document.getElementById(id);
-      if (!btn) return;
-      if ((lang === 'id' && id.includes('id')) || (lang === 'en' && id.includes('en'))) {
-        btn.classList.add('active','bg-blue-600','text-white');
-        btn.classList.remove('text-slate-400');
-      } else {
-        btn.classList.remove('active','bg-blue-600','text-white');
-        btn.classList.add('text-slate-400');
-      }
-    });
-  }
-
-  // ---- Mobile menu toggle ----
-  function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  }
-
-  // ---- FAQ accordion ----
-  document.querySelectorAll('.faq-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    });
-  });
-
-  // ---- Portfolio filter ----
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('active','bg-blue-600','text-white');
-        b.classList.add('bg-white','border','border-slate-200','text-slate-600');
-      });
-      btn.classList.add('active','bg-blue-600','text-white');
-      btn.classList.remove('bg-white','border','border-slate-200','text-slate-600');
-
-      const filter = btn.dataset.filter;
-      document.querySelectorAll('.portfolio-item').forEach(item => {
-        if (filter === 'all' || item.classList.contains(filter)) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // ---- Contact form ----
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('button[type="submit"]');
-    btn.textContent = currentLang === 'en' ? 'Sending...' : 'Mengirim...';
-    btn.disabled = true;
-    setTimeout(() => {
-      document.getElementById('form-success').classList.remove('hidden');
-      e.target.reset();
-      btn.textContent = currentLang === 'en' ? 'Send Quote Request' : 'Kirim Permintaan Penawaran';
-      btn.disabled = false;
-    }, 1500);
-  }
-
-  // ---- Navbar scroll effect ----
-  window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('shadow-2xl');
-    } else {
-      navbar.classList.remove('shadow-2xl');
-    }
-  });
-
-  // ---- Intersection Observer for bar animations ----
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.bar-fill').forEach(bar => {
-          bar.style.animationPlayState = 'running';
-        });
-      }
-    });
-  }, { threshold: 0.3 });
-
-  document.querySelectorAll('.bar-fill').forEach(bar => {
-    bar.style.animationPlayState = 'paused';
-  });
-
-  const aboutSection = document.getElementById('about');
-  if (aboutSection) observer.observe(aboutSection);
-
-</script>
+<script src="assets/js/language.js" defer></script>
+<script src="assets/js/navbar.js" defer></script>
+<script src="assets/js/services.js" defer></script>
+<script src="assets/js/faq.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 
 </body>
 </html>

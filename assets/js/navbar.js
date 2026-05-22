@@ -6,7 +6,7 @@ function toggleMenu() {
   }
 }
 
-// ---- Navbar scroll sticky shadow effect ----
+// ---- Navbar scroll effect ----
 window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
   if (navbar) {
@@ -18,5 +18,5 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Bind to window to allow HTML inline event handlers to trigger it
+// Bind to window for inline HTML access
 window.toggleMenu = toggleMenu;

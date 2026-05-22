@@ -1,62 +1,59 @@
-// ---- Language switcher and state ----
-window.currentLang = 'id';
+// ---- Language toggle ----
+let currentLang = 'id';
 
 function setLang(lang) {
-  window.currentLang = lang;
+  currentLang = lang;
   document.documentElement.lang = lang === 'id' ? 'id' : 'en';
 
-  // Toggle visible translations
   document.querySelectorAll('[data-en]').forEach(el => {
     const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-id-text') || el.getAttribute('data-id');
-    if (text && el.tagName !== 'OPTION') {
-      el.textContent = text;
-    }
-    if (text && el.tagName === 'OPTION') {
-      el.textContent = text;
-    }
+    if (text && el.tagName !== 'OPTION') el.textContent = text;
+    if (text && el.tagName === 'OPTION') el.textContent = text;
   });
 
-  // Handle placeholders
+  // Handle placeholder
+  const placeholders = {
+    'Nama PIC *': 'PIC Name *',
+    'Nama Perusahaan *': 'Company Name *',
+    'Email *': 'Email *',
+    'Nomor WhatsApp *': 'WhatsApp Number *',
+    'Lokasi Proyek': 'Project Location',
+    'Deskripsi singkat kebutuhan proyek Anda *': 'Brief description of your project needs *'
+  };
+
   document.querySelectorAll('[placeholder]').forEach(el => {
+    if (!el._origPlaceholder) el._origPlaceholder = el.placeholder;
+
     if (lang === 'en') {
-      if (!el._origPlaceholder) {
-        el._origPlaceholder = el.placeholder;
-      }
-      // If there's a custom english placeholder translation, apply it, else fallback
-      const enPlaceholder = el.getAttribute('data-en-placeholder');
-      if (enPlaceholder) {
-        el.placeholder = enPlaceholder;
+      if (placeholders[el._origPlaceholder]) {
+        el.placeholder = placeholders[el._origPlaceholder];
       }
     } else {
-      if (el._origPlaceholder) {
-        el.placeholder = el._origPlaceholder;
-      }
+      el.placeholder = el._origPlaceholder;
     }
   });
 
-  // Update consultation buttons
-  document.querySelectorAll('a[href="#contact"]').forEach(a => {
-    const span = a.querySelector('span');
-    if (span && span.textContent.includes('Konsultasi')) {
-      span.textContent = lang === 'en' ? 'Free Consultation' : 'Konsultasi Gratis';
-    } else if (span && span.textContent.includes('Consultation')) {
-      span.textContent = lang === 'en' ? 'Free Consultation' : 'Konsultasi Gratis';
+  // Update consultation button
+  document.querySelectorAll('a[href*="#contact"]').forEach(a => {
+    if (a.querySelector('span') && a.querySelector('span').textContent.match(/(Konsultasi|Consultation)/)) {
+      a.querySelector('span').textContent = lang === 'en' ? 'Free Consultation' : 'Konsultasi Gratis';
     }
   });
 
-  // Toggle active class on language toggle buttons
-  ['btn-id', 'btn-en', 'btn-id-m', 'btn-en-m'].forEach(id => {
+  // Toggle active state on buttons
+  ['btn-id','btn-en','btn-id-m','btn-en-m'].forEach(id => {
     const btn = document.getElementById(id);
     if (!btn) return;
     if ((lang === 'id' && id.includes('id')) || (lang === 'en' && id.includes('en'))) {
-      btn.classList.add('active', 'bg-blue-600', 'text-white');
+      btn.classList.add('active','bg-blue-600','text-white');
       btn.classList.remove('text-slate-400');
     } else {
-      btn.classList.remove('active', 'bg-blue-600', 'text-white');
+      btn.classList.remove('active','bg-blue-600','text-white');
       btn.classList.add('text-slate-400');
     }
   });
 }
 
-// Bind to window to allow HTML inline event handlers to trigger it
+// Bind to window for inline HTML access and global state
+window.currentLang = currentLang;
 window.setLang = setLang;

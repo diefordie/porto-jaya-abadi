@@ -11,7 +11,6 @@
     linear-gradient(135deg, #0f1622 0%, #1a2540 40%, #0d1520 100%);
 }
 
-/* Hero background visual layout */
 .hero-bg {
   background:
     radial-gradient(ellipse at 80% 0%, rgba(30,86,160,0.35) 0%, transparent 55%),
@@ -26,7 +25,6 @@
     linear-gradient(160deg, #0d1520 0%, #0f1e35 50%, #121a28 100%);
 }
 
-/* Card hover scaling and shadows */
 .card-hover {
   transition: all 0.3s ease;
 }
@@ -40,7 +38,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Diagonal section divider slants */
+/* Diagonal section divider */
 .diagonal-top {
   clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
   margin-top: -40px;
@@ -51,7 +49,7 @@
   padding-bottom: 80px;
 }
 
-/* Navbar interactive link underlines */
+/* Navbar active state */
 .nav-link {
   position: relative;
 }
@@ -65,22 +63,20 @@
   background: var(--steel-blue-light);
   transition: width 0.3s ease;
 }
-.nav-link:hover::after {
-  width: 100%;
-}
+.nav-link:hover::after { width: 100%; }
 
-/* Mobile dropdown container and transition */
+/* Mobile menu */
 #mobile-menu {
   transition: all 0.3s ease;
 }
 
-/* Language switch active button style */
+/* Language toggle */
 .lang-btn.active {
   background: var(--steel-blue);
   color: white;
 }
 
-/* Accordion FAQ layout transitions */
+/* FAQ accordion */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -96,7 +92,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Testimonial slider setup */
+/* Testimonial card */
 .testimonial-scroll {
   display: flex;
   gap: 1.5rem;
@@ -105,14 +101,20 @@
   scrollbar-width: none;
   padding-bottom: 1rem;
 }
-.testimonial-scroll::-webkit-scrollbar {
-  display: none;
-}
-.testimonial-card {
-  scroll-snap-align: start;
+.testimonial-scroll::-webkit-scrollbar { display: none; }
+.testimonial-card { scroll-snap-align: start; }
+
+/* Pulse dot */
+.pulse-dot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse-ring 1.5s ease-out infinite;
 }
 
-/* ===== INTERACTIVE SERVICE SHOWCASE COMPONENT ===== */
+/* ===== INTERACTIVE SERVICE SHOWCASE ===== */
 .service-tab {
   position: relative;
   display: flex;
@@ -132,9 +134,7 @@
 .service-tab::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  left: 0; top: 0; bottom: 0;
   width: 3px;
   background: var(--steel-blue-light);
   border-radius: 2px 0 0 2px;
@@ -164,9 +164,7 @@
   letter-spacing: 0.05em;
   min-width: 20px;
 }
-.service-tab.active .tab-num {
-  opacity: 1;
-}
+.service-tab.active .tab-num { opacity: 1; }
 .service-tab .tab-icon {
   font-size: 1.4rem;
   min-width: 32px;
@@ -210,7 +208,7 @@
   transform: translateX(0);
 }
 
-/* Service Preview Panel layout */
+/* Preview panel */
 .svc-preview-wrap {
   position: relative;
   min-height: 560px;
@@ -230,7 +228,7 @@
   position: relative;
 }
 
-/* Mobile Service horizontal scrolling tabs */
+/* Mobile tabs (horizontal scroll) */
 @media (max-width: 1023px) {
   .service-tabs-mobile {
     display: flex;
@@ -240,9 +238,7 @@
     padding-bottom: 0.25rem;
     scroll-snap-type: x mandatory;
   }
-  .service-tabs-mobile::-webkit-scrollbar {
-    display: none;
-  }
+  .service-tabs-mobile::-webkit-scrollbar { display: none; }
   .service-tab-mobile {
     flex-shrink: 0;
     scroll-snap-align: start;
