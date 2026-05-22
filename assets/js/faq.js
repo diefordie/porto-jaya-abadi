@@ -1,14 +1,27 @@
 // ---- FAQ accordion ----
-document.addEventListener('DOMContentLoaded', () => {
+function initFAQ() {
   document.querySelectorAll('.faq-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      if (item) {
-        const isOpen = item.classList.contains('open');
-        // Close all
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
+    // Remove old listener if any
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+
+    newBtn.addEventListener('click', () => {
+      const item = newBtn.parentElement;
+      const wasOpen = item.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+      // Open if not previously open
+      if (!wasOpen) {
+        item.classList.add('active');
       }
     });
   });
-});
+}
+
+// Bind to window
+window.initFAQ = initFAQ;
+
+// Fallback
+document.addEventListener('DOMContentLoaded', initFAQ);
