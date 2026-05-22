@@ -3,6 +3,7 @@ let currentLang = 'id';
 
 function setLang(lang) {
   currentLang = lang;
+  window.currentLang = lang;
   document.documentElement.lang = lang === 'id' ? 'id' : 'en';
 
   document.querySelectorAll('[data-en]').forEach(el => {
