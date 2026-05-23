@@ -8,29 +8,44 @@
     <!-- Section Header -->
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
       <div>
-        <span class="text-blue-600 font-semibold text-sm tracking-widest uppercase" data-id="APA YANG KAMI KERJAKAN" data-en="WHAT WE DO">APA YANG KAMI KERJAKAN</span>
-        <h2 class="mt-2 text-4xl md:text-5xl font-extrabold uppercase leading-tight" data-id="LAYANAN UTAMA KAMI" data-en="OUR CORE SERVICES">LAYANAN UTAMA KAMI</h2>
+        <span class="text-blue-600 font-semibold text-sm tracking-widest uppercase" data-id="APA YANG KAMI KERJAKAN"
+          data-en="WHAT WE DO">APA YANG KAMI KERJAKAN</span>
+        <h2 class="mt-2 text-4xl md:text-5xl font-extrabold uppercase leading-tight text-metal-dark"
+          data-id="LAYANAN UTAMA KAMI" data-en="OUR CORE SERVICES">LAYANAN UTAMA KAMI</h2>
       </div>
-      <p class="text-slate-500 max-w-md" data-id="Solusi lengkap untuk kebutuhan konstruksi baja, fabrikasi, dan maintenance industri skala nasional hingga internasional." data-en="Complete solutions for steel construction, fabrication, and industrial maintenance needs at national to international scale.">
-        Solusi lengkap untuk kebutuhan konstruksi baja, fabrikasi, dan maintenance industri skala nasional hingga internasional.
+      <p class="text-slate-500 max-w-md"
+        data-id="Solusi lengkap untuk kebutuhan konstruksi baja, fabrikasi, dan maintenance industri skala nasional hingga internasional."
+        data-en="Complete solutions for steel construction, fabrication, and industrial maintenance needs at national to international scale.">
+        Solusi lengkap untuk kebutuhan konstruksi baja, fabrikasi, dan maintenance industri skala nasional hingga
+        internasional.
       </p>
     </div>
 
     <!-- Mobile horizontal pill tabs (visible < lg) -->
     <div class="service-tabs-mobile lg:hidden mb-6">
-      <button class="service-tab-mobile active" onclick="selectService(0, this)">🗼 <span data-id="Tower Telekomunikasi" data-en="Telecom Tower">Tower Telekomunikasi</span></button>
-      <button class="service-tab-mobile" onclick="selectService(1, this)">📡 <span data-id="Mobile Tower" data-en="Mobile Tower">Mobile Tower</span></button>
-      <button class="service-tab-mobile" onclick="selectService(2, this)">🛢️ <span data-id="Tanki" data-en="Tank">Tanki Bahan Bakar/Air</span></button>
-      <button class="service-tab-mobile" onclick="selectService(3, this)">🏗️ <span data-id="Konstruksi Baja" data-en="Steel Construction">Konstruksi Baja</span></button>
-      <button class="service-tab-mobile" onclick="selectService(4, this)">📦 <span data-id="Modifikasi Container" data-en="Container Modification">Modifikasi Container</span></button>
-      <button class="service-tab-mobile" onclick="selectService(5, this)">⚙️ <span data-id="Tipping Unit" data-en="Tipping Unit">Tipping Unit</span></button>
-      <button class="service-tab-mobile" onclick="selectService(6, this)">🔧 <span data-id="Instalasi" data-en="Installation">Instalasi</span></button>
-      <button class="service-tab-mobile" onclick="selectService(7, this)">✂️ <span data-id="Cutting Skip" data-en="Cutting Skip">Cutting Skip</span></button>
-      <button class="service-tab-mobile" onclick="selectService(8, this)">🚛 <span data-id="Cargo Carrying Unit" data-en="Cargo Carrying Unit">Cargo Carrying Unit</span></button>
+      <button class="service-tab-mobile active" onclick="selectService(0, this)">🗼 <span data-id="Tower Telekomunikasi"
+          data-en="Telecom Tower">Tower Telekomunikasi</span></button>
+      <button class="service-tab-mobile" onclick="selectService(1, this)">📡 <span data-id="Mobile Tower"
+          data-en="Mobile Tower">Mobile Tower</span></button>
+      <button class="service-tab-mobile" onclick="selectService(2, this)">🛢️ <span data-id="Tanki" data-en="Tank">Tanki
+          Bahan Bakar/Air</span></button>
+      <button class="service-tab-mobile" onclick="selectService(3, this)">🏗️ <span data-id="Konstruksi Baja"
+          data-en="Steel Construction">Konstruksi Baja</span></button>
+      <button class="service-tab-mobile" onclick="selectService(4, this)">📦 <span data-id="Modifikasi Container"
+          data-en="Container Modification">Modifikasi Container</span></button>
+      <button class="service-tab-mobile" onclick="selectService(5, this)">⚙️ <span data-id="Tipping Unit"
+          data-en="Tipping Unit">Tipping Unit</span></button>
+      <button class="service-tab-mobile" onclick="selectService(6, this)">🔧 <span data-id="Instalasi"
+          data-en="Installation">Instalasi</span></button>
+      <button class="service-tab-mobile" onclick="selectService(7, this)">✂️ <span data-id="Cutting Skip"
+          data-en="Cutting Skip">Cutting Skip</span></button>
+      <button class="service-tab-mobile" onclick="selectService(8, this)">🚛 <span data-id="Cargo Carrying Unit"
+          data-en="Cargo Carrying Unit">Cargo Carrying Unit</span></button>
     </div>
 
     <!-- Main interactive showcase -->
-    <div class="flex flex-col lg:flex-row gap-5 lg:gap-8 rounded-3xl overflow-hidden bg-slate-950 p-5 lg:p-6 border border-white/5 shadow-2xl">
+    <div
+      class="flex flex-col lg:flex-row gap-5 lg:gap-8 rounded-3xl overflow-hidden bg-slate-950 p-5 lg:p-6 border border-white/5 shadow-2xl">
 
       <!-- LEFT: Tab list (desktop only) -->
       <div class="hidden lg:flex flex-col gap-2.5 lg:w-[38%] flex-shrink-0" id="service-tabs-desktop">
@@ -39,8 +54,10 @@
           <span class="tab-num">01</span>
           <span class="tab-icon">🗼</span>
           <span class="flex-1">
-            <span class="tab-title block" data-id="Tower Telekomunikasi" data-en="Telecom Tower">Tower Telekomunikasi</span>
-            <span class="tab-sub block" data-id="Fabrikasi & instalasi tower telekomunikasi" data-en="Telecom tower fabrication & installation">Fabrikasi & instalasi tower telekomunikasi</span>
+            <span class="tab-title block" data-id="Tower Telekomunikasi" data-en="Telecom Tower">Tower
+              Telekomunikasi</span>
+            <span class="tab-sub block" data-id="Fabrikasi & instalasi tower telekomunikasi"
+              data-en="Telecom tower fabrication & installation">Fabrikasi & instalasi tower telekomunikasi</span>
           </span>
           <span class="tab-arrow">→</span>
         </button>
@@ -50,7 +67,8 @@
           <span class="tab-icon">📡</span>
           <span class="flex-1">
             <span class="tab-title block" data-id="Mobile Tower" data-en="Mobile Tower">Mobile Tower</span>
-            <span class="tab-sub block" data-id="Tower portabel & mudah dipindah" data-en="Portable & relocatable tower">Tower portabel & mudah dipindah</span>
+            <span class="tab-sub block" data-id="Tower portabel & mudah dipindah"
+              data-en="Portable & relocatable tower">Tower portabel & mudah dipindah</span>
           </span>
           <span class="tab-arrow">→</span>
         </button>
@@ -59,8 +77,10 @@
           <span class="tab-num">03</span>
           <span class="tab-icon">🛢️</span>
           <span class="flex-1">
-            <span class="tab-title block" data-id="Tanki Bahan Bakar atau Air" data-en="Fuel or Water Tank">Tanki Bahan Bakar / Air</span>
-            <span class="tab-sub block" data-id="Tangki bahan bakar & tanki air industri" data-en="Industrial fuel & water tanks">Tangki bahan bakar & air industri</span>
+            <span class="tab-title block" data-id="Tanki Bahan Bakar atau Air" data-en="Fuel or Water Tank">Tanki Bahan
+              Bakar / Air</span>
+            <span class="tab-sub block" data-id="Tangki bahan bakar & tanki air industri"
+              data-en="Industrial fuel & water tanks">Tangki bahan bakar & air industri</span>
           </span>
           <span class="tab-arrow">→</span>
         </button>
@@ -70,7 +90,8 @@
           <span class="tab-icon">🏗️</span>
           <span class="flex-1">
             <span class="tab-title block" data-id="Konstruksi Baja" data-en="Steel Construction">Konstruksi Baja</span>
-            <span class="tab-sub block" data-id="Struktur baja skala besar" data-en="Large-scale steel structures">Struktur baja skala besar</span>
+            <span class="tab-sub block" data-id="Struktur baja skala besar"
+              data-en="Large-scale steel structures">Struktur baja skala besar</span>
           </span>
           <span class="tab-arrow">→</span>
         </button>
@@ -79,8 +100,10 @@
           <span class="tab-num">05</span>
           <span class="tab-icon">📦</span>
           <span class="flex-1">
-            <span class="tab-title block" data-id="Modifikasi Container" data-en="Container Modification">Modifikasi Container</span>
-            <span class="tab-sub block" data-id="Modifikasi container sesuai kebutuhan" data-en="Custom container modification">Modifikasi container sesuai kebutuhan</span>
+            <span class="tab-title block" data-id="Modifikasi Container" data-en="Container Modification">Modifikasi
+              Container</span>
+            <span class="tab-sub block" data-id="Modifikasi container sesuai kebutuhan"
+              data-en="Custom container modification">Modifikasi container sesuai kebutuhan</span>
           </span>
           <span class="tab-arrow">→</span>
         </button>
@@ -90,7 +113,8 @@
           <span class="tab-icon">⚙️</span>
           <span class="flex-1">
             <span class="tab-title block" data-id="Tipping Unit" data-en="Tipping Unit">Tipping Unit</span>
-            <span class="tab-sub block" data-id="Unit tipping untuk industri tambang" data-en="Tipping unit for mining industry">Unit tipping industri & pertambangan</span>
+            <span class="tab-sub block" data-id="Unit tipping untuk industri tambang"
+              data-en="Tipping unit for mining industry">Unit tipping industri & pertambangan</span>
           </span>
           <span class="tab-arrow">→</span>
         </button>
@@ -100,7 +124,8 @@
           <span class="tab-icon">🔧</span>
           <span class="flex-1">
             <span class="tab-title block" data-id="Instalasi" data-en="Installation">Instalasi</span>
-            <span class="tab-sub block" data-id="Instalasi peralatan & sistem industri" data-en="Equipment & industrial system installation">Instalasi peralatan & sistem industri</span>
+            <span class="tab-sub block" data-id="Instalasi peralatan & sistem industri"
+              data-en="Equipment & industrial system installation">Instalasi peralatan & sistem industri</span>
           </span>
           <span class="tab-arrow">→</span>
         </button>
@@ -110,7 +135,8 @@
           <span class="tab-icon">✂️</span>
           <span class="flex-1">
             <span class="tab-title block" data-id="Cutting Skip" data-en="Cutting Skip">Cutting Skip</span>
-            <span class="tab-sub block" data-id="Peralatan cutting skip presisi" data-en="Precision cutting skip equipment">Peralatan cutting skip presisi tinggi</span>
+            <span class="tab-sub block" data-id="Peralatan cutting skip presisi"
+              data-en="Precision cutting skip equipment">Peralatan cutting skip presisi tinggi</span>
           </span>
           <span class="tab-arrow">→</span>
         </button>
@@ -119,17 +145,24 @@
           <span class="tab-num">09</span>
           <span class="tab-icon">🚛</span>
           <span class="flex-1">
-            <span class="tab-title block" data-id="Cargo Carrying Unit" data-en="Cargo Carrying Unit">Cargo Carrying Unit</span>
-            <span class="tab-sub block" data-id="Unit pengangkut kargo industri" data-en="Industrial cargo carrying unit">Unit pengangkut kargo industri</span>
+            <span class="tab-title block" data-id="Cargo Carrying Unit" data-en="Cargo Carrying Unit">Cargo Carrying
+              Unit</span>
+            <span class="tab-sub block" data-id="Unit pengangkut kargo industri"
+              data-en="Industrial cargo carrying unit">Unit pengangkut kargo industri</span>
           </span>
           <span class="tab-arrow">→</span>
         </button>
 
         <!-- CTA bottom -->
         <div class="mt-auto pt-3 border-t border-white/5">
-          <a href="#contact" class="flex items-center justify-between gap-3 w-full px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold font-display uppercase tracking-wide transition group">
-            <span data-id="Butuh Solusi Custom? Diskusi Sekarang" data-en="Need Custom Solution? Discuss Now">Butuh Solusi Custom? Diskusi Sekarang</span>
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <a href="#contact"
+            class="flex items-center justify-between gap-3 w-full px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold font-display uppercase tracking-wide transition group">
+            <span data-id="Butuh Solusi Custom? Diskusi Sekarang" data-en="Need Custom Solution? Discuss Now">Butuh
+              Solusi Custom? Diskusi Sekarang</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </a>
         </div>
 
@@ -141,28 +174,53 @@
         <!-- Preview 0 – Tower Telekomunikasi -->
         <div class="svc-preview-item active" data-index="0">
           <div class="relative rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80" alt="Tower Telekomunikasi" class="w-full h-56 lg:h-72 object-cover"/>
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80"
+              alt="Tower Telekomunikasi" class="w-full h-56 lg:h-72 object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div class="absolute top-4 left-4"><span class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">01 / 09</span></div>
+            <div class="absolute top-4 left-4"><span
+                class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">01
+                / 09</span></div>
           </div>
           <div class="mt-5 px-1">
-            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Tower Telekomunikasi" data-en="Telecommunication Tower">Tower Telekomunikasi</h3>
-            <p class="mt-3 text-slate-400 text-sm leading-relaxed" data-id="Fabrikasi dan instalasi tower telekomunikasi berbagai tipe — SST, Monopole, Guyed Mast — sesuai spesifikasi operator. Dikerjakan dengan standar keamanan struktur tinggi dan material baja berkualitas." data-en="Fabrication and installation of various types of telecommunication towers — SST, Monopole, Guyed Mast — per operator specifications. Executed with high structural safety standards and quality steel materials.">
-              Fabrikasi dan instalasi tower telekomunikasi berbagai tipe — SST, Monopole, Guyed Mast — sesuai spesifikasi operator. Dikerjakan dengan standar keamanan struktur tinggi dan material baja berkualitas.
+            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight"
+              data-id="Tower Telekomunikasi" data-en="Telecommunication Tower">Tower Telekomunikasi</h3>
+            <p class="mt-3 text-slate-400 text-sm leading-relaxed"
+              data-id="Fabrikasi dan instalasi tower telekomunikasi berbagai tipe — SST, Monopole, Guyed Mast — sesuai spesifikasi operator. Dikerjakan dengan standar keamanan struktur tinggi dan material baja berkualitas."
+              data-en="Fabrication and installation of various types of telecommunication towers — SST, Monopole, Guyed Mast — per operator specifications. Executed with high structural safety standards and quality steel materials.">
+              Fabrikasi dan instalasi tower telekomunikasi berbagai tipe — SST, Monopole, Guyed Mast — sesuai
+              spesifikasi operator. Dikerjakan dengan standar keamanan struktur tinggi dan material baja berkualitas.
             </p>
             <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="SST, Monopole & Guyed Mast" data-en="SST, Monopole & Guyed Mast">SST, Monopole & Guyed Mast</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Fabrikasi & Erection Tower" data-en="Tower Fabrication & Erection">Fabrikasi & Erection Tower</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Grounding & Lightning Protection" data-en="Grounding & Lightning Protection">Grounding & Lightning Protection</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Hot Dip Galvanizing" data-en="Hot Dip Galvanizing">Hot Dip Galvanizing</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Sesuai Standar Telko Nasional" data-en="Per National Telco Standards">Sesuai Standar Telko Nasional</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="SST, Monopole & Guyed Mast" data-en="SST, Monopole & Guyed Mast">SST, Monopole & Guyed
+                  Mast</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Fabrikasi & Erection Tower" data-en="Tower Fabrication & Erection">Fabrikasi & Erection
+                  Tower</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Grounding & Lightning Protection" data-en="Grounding & Lightning Protection">Grounding &
+                  Lightning Protection</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Hot Dip Galvanizing" data-en="Hot Dip Galvanizing">Hot Dip Galvanizing</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Sesuai Standar Telko Nasional" data-en="Per National Telco Standards">Sesuai Standar Telko
+                  Nasional</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
-              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam" data-en="Response within 24 hours">Respon dalam 24 jam</span>
+              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam"
+                data-en="Response within 24 hours">Respon dalam 24 jam</span>
             </div>
           </div>
         </div>
@@ -170,28 +228,54 @@
         <!-- Preview 1 – Mobile Tower -->
         <div class="svc-preview-item" data-index="1">
           <div class="relative rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1520869562399-e772f042f422?auto=format&fit=crop&w=1200&q=80" alt="Mobile Tower" class="w-full h-56 lg:h-72 object-cover"/>
+            <img src="https://images.unsplash.com/photo-1520869562399-e772f042f422?auto=format&fit=crop&w=1200&q=80"
+              alt="Mobile Tower" class="w-full h-56 lg:h-72 object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div class="absolute top-4 left-4"><span class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">02 / 09</span></div>
+            <div class="absolute top-4 left-4"><span
+                class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">02
+                / 09</span></div>
           </div>
           <div class="mt-5 px-1">
-            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Mobile Tower" data-en="Mobile Tower">Mobile Tower</h3>
-            <p class="mt-3 text-slate-400 text-sm leading-relaxed" data-id="Tower portabel yang dapat dipindahkan dan dipasang dengan cepat di lokasi terpencil atau sementara. Ideal untuk kebutuhan coverage jaringan di area remote, event, atau emergency deployment." data-en="Portable tower that can be relocated and deployed quickly at remote or temporary sites. Ideal for network coverage needs in remote areas, events, or emergency deployments.">
-              Tower portabel yang dapat dipindahkan dan dipasang dengan cepat di lokasi terpencil atau sementara. Ideal untuk kebutuhan coverage jaringan di area remote, event, atau emergency deployment.
+            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Mobile Tower"
+              data-en="Mobile Tower">Mobile Tower</h3>
+            <p class="mt-3 text-slate-400 text-sm leading-relaxed"
+              data-id="Tower portabel yang dapat dipindahkan dan dipasang dengan cepat di lokasi terpencil atau sementara. Ideal untuk kebutuhan coverage jaringan di area remote, event, atau emergency deployment."
+              data-en="Portable tower that can be relocated and deployed quickly at remote or temporary sites. Ideal for network coverage needs in remote areas, events, or emergency deployments.">
+              Tower portabel yang dapat dipindahkan dan dipasang dengan cepat di lokasi terpencil atau sementara. Ideal
+              untuk kebutuhan coverage jaringan di area remote, event, atau emergency deployment.
             </p>
             <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Desain Portabel & Knockdown" data-en="Portable & Knockdown Design">Desain Portabel & Knockdown</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Pemasangan Cepat di Lapangan" data-en="Rapid Field Deployment">Pemasangan Cepat di Lapangan</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Cocok untuk Area Remote" data-en="Suitable for Remote Areas">Cocok untuk Area Remote</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Struktur Ringan & Kuat" data-en="Lightweight & Strong Structure">Struktur Ringan & Kuat</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Custom Tinggi & Spesifikasi" data-en="Custom Height & Specifications">Custom Tinggi & Spesifikasi</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Desain Portabel & Knockdown" data-en="Portable & Knockdown Design">Desain Portabel &
+                  Knockdown</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Pemasangan Cepat di Lapangan" data-en="Rapid Field Deployment">Pemasangan Cepat di
+                  Lapangan</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Cocok untuk Area Remote" data-en="Suitable for Remote Areas">Cocok untuk Area Remote</span>
+              </li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Struktur Ringan & Kuat" data-en="Lightweight & Strong Structure">Struktur Ringan &
+                  Kuat</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Custom Tinggi & Spesifikasi" data-en="Custom Height & Specifications">Custom Tinggi &
+                  Spesifikasi</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
-              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam" data-en="Response within 24 hours">Respon dalam 24 jam</span>
+              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam"
+                data-en="Response within 24 hours">Respon dalam 24 jam</span>
             </div>
           </div>
         </div>
@@ -199,28 +283,52 @@
         <!-- Preview 2 – Tanki Bahan Bakar / Air -->
         <div class="svc-preview-item" data-index="2">
           <div class="relative rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" alt="Tanki Bahan Bakar atau Air" class="w-full h-56 lg:h-72 object-cover"/>
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
+              alt="Tanki Bahan Bakar atau Air" class="w-full h-56 lg:h-72 object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div class="absolute top-4 left-4"><span class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">03 / 09</span></div>
+            <div class="absolute top-4 left-4"><span
+                class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">03
+                / 09</span></div>
           </div>
           <div class="mt-5 px-1">
-            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Tanki Bahan Bakar atau Air" data-en="Fuel or Water Tank">Tanki Bahan Bakar / Air</h3>
-            <p class="mt-3 text-slate-400 text-sm leading-relaxed" data-id="Fabrikasi tangki penyimpanan bahan bakar dan air industri berbagai kapasitas. Dibangun dari plat baja berkualitas tinggi dengan sistem coating anti-karat dan sesuai standar keamanan penyimpanan cairan." data-en="Fabrication of fuel and water storage tanks in various capacities. Built from high-quality steel plates with anti-rust coating systems and in compliance with liquid storage safety standards.">
-              Fabrikasi tangki penyimpanan bahan bakar dan air industri berbagai kapasitas. Dibangun dari plat baja berkualitas tinggi dengan sistem coating anti-karat dan sesuai standar keamanan penyimpanan cairan.
+            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight"
+              data-id="Tanki Bahan Bakar atau Air" data-en="Fuel or Water Tank">Tanki Bahan Bakar / Air</h3>
+            <p class="mt-3 text-slate-400 text-sm leading-relaxed"
+              data-id="Fabrikasi tangki penyimpanan bahan bakar dan air industri berbagai kapasitas. Dibangun dari plat baja berkualitas tinggi dengan sistem coating anti-karat dan sesuai standar keamanan penyimpanan cairan."
+              data-en="Fabrication of fuel and water storage tanks in various capacities. Built from high-quality steel plates with anti-rust coating systems and in compliance with liquid storage safety standards.">
+              Fabrikasi tangki penyimpanan bahan bakar dan air industri berbagai kapasitas. Dibangun dari plat baja
+              berkualitas tinggi dengan sistem coating anti-karat dan sesuai standar keamanan penyimpanan cairan.
             </p>
             <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Tangki BBM & Solar" data-en="Fuel & Diesel Tank">Tangki BBM & Solar</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Tangki Air Bersih & Proses" data-en="Clean & Process Water Tank">Tangki Air Bersih & Proses</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Kapasitas Custom Sesuai Kebutuhan" data-en="Custom Capacity per Requirements">Kapasitas Custom Sesuai Kebutuhan</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Coating Epoxy Anti-Karat" data-en="Anti-Rust Epoxy Coating">Coating Epoxy Anti-Karat</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Horizontal & Vertikal" data-en="Horizontal & Vertical">Horizontal & Vertikal</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Tangki BBM & Solar" data-en="Fuel & Diesel Tank">Tangki BBM & Solar</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Tangki Air Bersih & Proses" data-en="Clean & Process Water Tank">Tangki Air Bersih &
+                  Proses</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Kapasitas Custom Sesuai Kebutuhan" data-en="Custom Capacity per Requirements">Kapasitas
+                  Custom Sesuai Kebutuhan</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Coating Epoxy Anti-Karat" data-en="Anti-Rust Epoxy Coating">Coating Epoxy Anti-Karat</span>
+              </li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Horizontal & Vertikal" data-en="Horizontal & Vertical">Horizontal & Vertikal</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
-              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam" data-en="Response within 24 hours">Respon dalam 24 jam</span>
+              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam"
+                data-en="Response within 24 hours">Respon dalam 24 jam</span>
             </div>
           </div>
         </div>
@@ -228,28 +336,54 @@
         <!-- Preview 3 – Konstruksi Baja -->
         <div class="svc-preview-item" data-index="3">
           <div class="relative rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80" alt="Konstruksi Baja" class="w-full h-56 lg:h-72 object-cover"/>
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
+              alt="Konstruksi Baja" class="w-full h-56 lg:h-72 object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div class="absolute top-4 left-4"><span class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">04 / 09</span></div>
+            <div class="absolute top-4 left-4"><span
+                class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">04
+                / 09</span></div>
           </div>
           <div class="mt-5 px-1">
-            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Konstruksi Baja" data-en="Steel Construction">Konstruksi Baja</h3>
-            <p class="mt-3 text-slate-400 text-sm leading-relaxed" data-id="Pembangunan struktur baja presisi tinggi untuk gedung industri, gudang, platform, dan infrastruktur berat. Kami menangani proyek skala besar dengan standar keamanan K3 tertinggi dan pengalaman lebih dari 20 tahun." data-en="High-precision steel structure construction for industrial buildings, warehouses, platforms, and heavy infrastructure. We handle large-scale projects with the highest K3 safety standards and over 20 years of experience.">
-              Pembangunan struktur baja presisi tinggi untuk gedung industri, gudang, platform, dan infrastruktur berat. Kami menangani proyek skala besar dengan standar K3 tertinggi dan pengalaman lebih dari 20 tahun.
+            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight"
+              data-id="Konstruksi Baja" data-en="Steel Construction">Konstruksi Baja</h3>
+            <p class="mt-3 text-slate-400 text-sm leading-relaxed"
+              data-id="Pembangunan struktur baja presisi tinggi untuk gedung industri, gudang, platform, dan infrastruktur berat. Kami menangani proyek skala besar dengan standar keamanan K3 tertinggi dan pengalaman lebih dari 20 tahun."
+              data-en="High-precision steel structure construction for industrial buildings, warehouses, platforms, and heavy infrastructure. We handle large-scale projects with the highest K3 safety standards and over 20 years of experience.">
+              Pembangunan struktur baja presisi tinggi untuk gedung industri, gudang, platform, dan infrastruktur berat.
+              Kami menangani proyek skala besar dengan standar K3 tertinggi dan pengalaman lebih dari 20 tahun.
             </p>
             <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Struktur Gedung & Gudang Industri" data-en="Industrial Buildings & Warehouses">Struktur Gedung & Gudang Industri</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Platform & Mezzanine Baja" data-en="Steel Platform & Mezzanine">Platform & Mezzanine Baja</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Jembatan & Infrastruktur Berat" data-en="Bridges & Heavy Infrastructure">Jembatan & Infrastruktur Berat</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Erection & Assembly Struktur" data-en="Structure Erection & Assembly">Erection & Assembly Struktur</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Standar SNI & International" data-en="SNI & International Standards">Standar SNI & International</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Struktur Gedung & Gudang Industri" data-en="Industrial Buildings & Warehouses">Struktur
+                  Gedung & Gudang Industri</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Platform & Mezzanine Baja" data-en="Steel Platform & Mezzanine">Platform & Mezzanine
+                  Baja</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Jembatan & Infrastruktur Berat" data-en="Bridges & Heavy Infrastructure">Jembatan &
+                  Infrastruktur Berat</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Erection & Assembly Struktur" data-en="Structure Erection & Assembly">Erection & Assembly
+                  Struktur</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Standar SNI & International" data-en="SNI & International Standards">Standar SNI &
+                  International</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
-              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam" data-en="Response within 24 hours">Respon dalam 24 jam</span>
+              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam"
+                data-en="Response within 24 hours">Respon dalam 24 jam</span>
             </div>
           </div>
         </div>
@@ -257,28 +391,54 @@
         <!-- Preview 4 – Modifikasi Container -->
         <div class="svc-preview-item" data-index="4">
           <div class="relative rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1494412552100-42e4e7a74ec6?auto=format&fit=crop&w=1200&q=80" alt="Modifikasi Container" class="w-full h-56 lg:h-72 object-cover"/>
+            <img src="https://images.unsplash.com/photo-1494412552100-42e4e7a74ec6?auto=format&fit=crop&w=1200&q=80"
+              alt="Modifikasi Container" class="w-full h-56 lg:h-72 object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div class="absolute top-4 left-4"><span class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">05 / 09</span></div>
+            <div class="absolute top-4 left-4"><span
+                class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">05
+                / 09</span></div>
           </div>
           <div class="mt-5 px-1">
-            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Modifikasi Container" data-en="Container Modification">Modifikasi Container</h3>
-            <p class="mt-3 text-slate-400 text-sm leading-relaxed" data-id="Layanan modifikasi container pengiriman menjadi berbagai fungsi: kantor portabel, gudang, barak, workshop, atau unit khusus sesuai kebutuhan industri dan proyek lapangan." data-en="Container modification services transforming shipping containers into various functions: portable offices, warehouses, barracks, workshops, or custom units for industrial and field project needs.">
-              Layanan modifikasi container pengiriman menjadi berbagai fungsi: kantor portabel, gudang, barak, workshop, atau unit khusus sesuai kebutuhan industri dan proyek lapangan.
+            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight"
+              data-id="Modifikasi Container" data-en="Container Modification">Modifikasi Container</h3>
+            <p class="mt-3 text-slate-400 text-sm leading-relaxed"
+              data-id="Layanan modifikasi container pengiriman menjadi berbagai fungsi: kantor portabel, gudang, barak, workshop, atau unit khusus sesuai kebutuhan industri dan proyek lapangan."
+              data-en="Container modification services transforming shipping containers into various functions: portable offices, warehouses, barracks, workshops, or custom units for industrial and field project needs.">
+              Layanan modifikasi container pengiriman menjadi berbagai fungsi: kantor portabel, gudang, barak, workshop,
+              atau unit khusus sesuai kebutuhan industri dan proyek lapangan.
             </p>
             <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Container Kantor & Barak" data-en="Office & Barrack Container">Container Kantor & Barak</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Container Workshop & Gudang" data-en="Workshop & Storage Container">Container Workshop & Gudang</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Cutting, Welding & Plating" data-en="Cutting, Welding & Plating">Cutting, Welding & Plating</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Instalasi Listrik & AC" data-en="Electrical & AC Installation">Instalasi Listrik & AC</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Custom Layout Sesuai Kebutuhan" data-en="Custom Layout per Requirements">Custom Layout Sesuai Kebutuhan</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Container Kantor & Barak" data-en="Office & Barrack Container">Container Kantor &
+                  Barak</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Container Workshop & Gudang" data-en="Workshop & Storage Container">Container Workshop &
+                  Gudang</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Cutting, Welding & Plating" data-en="Cutting, Welding & Plating">Cutting, Welding &
+                  Plating</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Instalasi Listrik & AC" data-en="Electrical & AC Installation">Instalasi Listrik & AC</span>
+              </li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Custom Layout Sesuai Kebutuhan" data-en="Custom Layout per Requirements">Custom Layout Sesuai
+                  Kebutuhan</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
-              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam" data-en="Response within 24 hours">Respon dalam 24 jam</span>
+              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam"
+                data-en="Response within 24 hours">Respon dalam 24 jam</span>
             </div>
           </div>
         </div>
@@ -286,28 +446,54 @@
         <!-- Preview 5 – Tipping Unit -->
         <div class="svc-preview-item" data-index="5">
           <div class="relative rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" alt="Tipping Unit" class="w-full h-56 lg:h-72 object-cover"/>
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+              alt="Tipping Unit" class="w-full h-56 lg:h-72 object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div class="absolute top-4 left-4"><span class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">06 / 09</span></div>
+            <div class="absolute top-4 left-4"><span
+                class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">06
+                / 09</span></div>
           </div>
           <div class="mt-5 px-1">
-            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Tipping Unit" data-en="Tipping Unit">Tipping Unit</h3>
-            <p class="mt-3 text-slate-400 text-sm leading-relaxed" data-id="Fabrikasi tipping unit untuk kebutuhan industri pertambangan dan transportasi material curah. Dirancang kuat, tahan beban berat, dan mudah dioperasikan di berbagai kondisi lapangan." data-en="Tipping unit fabrication for mining and bulk material transport industries. Designed to be strong, heavy-load resistant, and easy to operate in various field conditions.">
-              Fabrikasi tipping unit untuk kebutuhan industri pertambangan dan transportasi material curah. Dirancang kuat, tahan beban berat, dan mudah dioperasikan di berbagai kondisi lapangan.
+            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Tipping Unit"
+              data-en="Tipping Unit">Tipping Unit</h3>
+            <p class="mt-3 text-slate-400 text-sm leading-relaxed"
+              data-id="Fabrikasi tipping unit untuk kebutuhan industri pertambangan dan transportasi material curah. Dirancang kuat, tahan beban berat, dan mudah dioperasikan di berbagai kondisi lapangan."
+              data-en="Tipping unit fabrication for mining and bulk material transport industries. Designed to be strong, heavy-load resistant, and easy to operate in various field conditions.">
+              Fabrikasi tipping unit untuk kebutuhan industri pertambangan dan transportasi material curah. Dirancang
+              kuat, tahan beban berat, dan mudah dioperasikan di berbagai kondisi lapangan.
             </p>
             <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Tipping Unit Industri Tambang" data-en="Mining Industry Tipping Unit">Tipping Unit Industri Tambang</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Material Baja Tebal & Kuat" data-en="Thick & Strong Steel Material">Material Baja Tebal & Kuat</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Sistem Hidrolik Handal" data-en="Reliable Hydraulic System">Sistem Hidrolik Handal</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Custom Kapasitas & Dimensi" data-en="Custom Capacity & Dimensions">Custom Kapasitas & Dimensi</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Coating Anti-Karat & Abrasif" data-en="Anti-Rust & Abrasion Coating">Coating Anti-Karat & Abrasif</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Tipping Unit Industri Tambang" data-en="Mining Industry Tipping Unit">Tipping Unit Industri
+                  Tambang</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Material Baja Tebal & Kuat" data-en="Thick & Strong Steel Material">Material Baja Tebal &
+                  Kuat</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Sistem Hidrolik Handal" data-en="Reliable Hydraulic System">Sistem Hidrolik Handal</span>
+              </li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Custom Kapasitas & Dimensi" data-en="Custom Capacity & Dimensions">Custom Kapasitas &
+                  Dimensi</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Coating Anti-Karat & Abrasif" data-en="Anti-Rust & Abrasion Coating">Coating Anti-Karat &
+                  Abrasif</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
-              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam" data-en="Response within 24 hours">Respon dalam 24 jam</span>
+              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam"
+                data-en="Response within 24 hours">Respon dalam 24 jam</span>
             </div>
           </div>
         </div>
@@ -315,28 +501,52 @@
         <!-- Preview 6 – Instalasi -->
         <div class="svc-preview-item" data-index="6">
           <div class="relative rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?auto=format&fit=crop&w=1200&q=80" alt="Instalasi" class="w-full h-56 lg:h-72 object-cover"/>
+            <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?auto=format&fit=crop&w=1200&q=80"
+              alt="Instalasi" class="w-full h-56 lg:h-72 object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div class="absolute top-4 left-4"><span class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">07 / 09</span></div>
+            <div class="absolute top-4 left-4"><span
+                class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">07
+                / 09</span></div>
           </div>
           <div class="mt-5 px-1">
-            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Instalasi" data-en="Installation">Instalasi</h3>
-            <p class="mt-3 text-slate-400 text-sm leading-relaxed" data-id="Jasa instalasi peralatan industri, sistem mekanikal, elektrikal, dan struktur pendukung di berbagai sektor. Dikerjakan oleh tenaga ahli berpengalaman dengan standar keselamatan kerja K3." data-en="Industrial equipment installation services, mechanical, electrical systems, and support structures across various sectors. Carried out by experienced professionals with K3 occupational safety standards.">
-              Jasa instalasi peralatan industri, sistem mekanikal, elektrikal, dan struktur pendukung di berbagai sektor. Dikerjakan oleh tenaga ahli berpengalaman dengan standar keselamatan kerja K3.
+            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Instalasi"
+              data-en="Installation">Instalasi</h3>
+            <p class="mt-3 text-slate-400 text-sm leading-relaxed"
+              data-id="Jasa instalasi peralatan industri, sistem mekanikal, elektrikal, dan struktur pendukung di berbagai sektor. Dikerjakan oleh tenaga ahli berpengalaman dengan standar keselamatan kerja K3."
+              data-en="Industrial equipment installation services, mechanical, electrical systems, and support structures across various sectors. Carried out by experienced professionals with K3 occupational safety standards.">
+              Jasa instalasi peralatan industri, sistem mekanikal, elektrikal, dan struktur pendukung di berbagai
+              sektor. Dikerjakan oleh tenaga ahli berpengalaman dengan standar keselamatan kerja K3.
             </p>
             <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Instalasi Peralatan Industri" data-en="Industrial Equipment Installation">Instalasi Peralatan Industri</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Mekanikal & Elektrikal" data-en="Mechanical & Electrical">Mekanikal & Elektrikal</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Instalasi Perpipaan & Fitting" data-en="Piping & Fitting Installation">Instalasi Perpipaan & Fitting</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Commissioning & Testing" data-en="Commissioning & Testing">Commissioning & Testing</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Standar K3 & HSE" data-en="K3 & HSE Standards">Standar K3 & HSE</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Instalasi Peralatan Industri" data-en="Industrial Equipment Installation">Instalasi Peralatan
+                  Industri</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Mekanikal & Elektrikal" data-en="Mechanical & Electrical">Mekanikal & Elektrikal</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Instalasi Perpipaan & Fitting" data-en="Piping & Fitting Installation">Instalasi Perpipaan &
+                  Fitting</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Commissioning & Testing" data-en="Commissioning & Testing">Commissioning & Testing</span>
+              </li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Standar K3 & HSE" data-en="K3 & HSE Standards">Standar K3 & HSE</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
-              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam" data-en="Response within 24 hours">Respon dalam 24 jam</span>
+              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam"
+                data-en="Response within 24 hours">Respon dalam 24 jam</span>
             </div>
           </div>
         </div>
@@ -344,28 +554,53 @@
         <!-- Preview 7 – Cutting Skip -->
         <div class="svc-preview-item" data-index="7">
           <div class="relative rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80" alt="Cutting Skip" class="w-full h-56 lg:h-72 object-cover"/>
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+              alt="Cutting Skip" class="w-full h-56 lg:h-72 object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div class="absolute top-4 left-4"><span class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">08 / 09</span></div>
+            <div class="absolute top-4 left-4"><span
+                class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">08
+                / 09</span></div>
           </div>
           <div class="mt-5 px-1">
-            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Cutting Skip" data-en="Cutting Skip">Cutting Skip</h3>
-            <p class="mt-3 text-slate-400 text-sm leading-relaxed" data-id="Fabrikasi cutting skip untuk kebutuhan penanganan material sisa dan scrap di lingkungan industri berat. Dirancang dengan dimensi custom, material tebal, dan sistem pengosongan yang efisien." data-en="Cutting skip fabrication for handling scrap and waste materials in heavy industrial environments. Designed with custom dimensions, thick materials, and efficient emptying systems.">
-              Fabrikasi cutting skip untuk kebutuhan penanganan material sisa dan scrap di lingkungan industri berat. Dirancang dengan dimensi custom, material tebal, dan sistem pengosongan yang efisien.
+            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Cutting Skip"
+              data-en="Cutting Skip">Cutting Skip</h3>
+            <p class="mt-3 text-slate-400 text-sm leading-relaxed"
+              data-id="Fabrikasi cutting skip untuk kebutuhan penanganan material sisa dan scrap di lingkungan industri berat. Dirancang dengan dimensi custom, material tebal, dan sistem pengosongan yang efisien."
+              data-en="Cutting skip fabrication for handling scrap and waste materials in heavy industrial environments. Designed with custom dimensions, thick materials, and efficient emptying systems.">
+              Fabrikasi cutting skip untuk kebutuhan penanganan material sisa dan scrap di lingkungan industri berat.
+              Dirancang dengan dimensi custom, material tebal, dan sistem pengosongan yang efisien.
             </p>
             <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Penanganan Scrap & Material Sisa" data-en="Scrap & Waste Material Handling">Penanganan Scrap & Material Sisa</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Plat Baja Tebal & Tahan Lama" data-en="Thick & Durable Steel Plate">Plat Baja Tebal & Tahan Lama</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Sistem Fork Pocket & Lifting Lug" data-en="Fork Pocket & Lifting Lug System">Sistem Fork Pocket & Lifting Lug</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Kapasitas Custom" data-en="Custom Capacity">Kapasitas Custom</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Finishing Sandblast & Cat" data-en="Sandblast & Paint Finishing">Finishing Sandblast & Cat</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Penanganan Scrap & Material Sisa" data-en="Scrap & Waste Material Handling">Penanganan Scrap
+                  & Material Sisa</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Plat Baja Tebal & Tahan Lama" data-en="Thick & Durable Steel Plate">Plat Baja Tebal & Tahan
+                  Lama</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Sistem Fork Pocket & Lifting Lug" data-en="Fork Pocket & Lifting Lug System">Sistem Fork
+                  Pocket & Lifting Lug</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Kapasitas Custom" data-en="Custom Capacity">Kapasitas Custom</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Finishing Sandblast & Cat" data-en="Sandblast & Paint Finishing">Finishing Sandblast &
+                  Cat</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
-              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam" data-en="Response within 24 hours">Respon dalam 24 jam</span>
+              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam"
+                data-en="Response within 24 hours">Respon dalam 24 jam</span>
             </div>
           </div>
         </div>
@@ -373,28 +608,51 @@
         <!-- Preview 8 – Cargo Carrying Unit -->
         <div class="svc-preview-item" data-index="8">
           <div class="relative rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" alt="Cargo Carrying Unit" class="w-full h-56 lg:h-72 object-cover"/>
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
+              alt="Cargo Carrying Unit" class="w-full h-56 lg:h-72 object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
-            <div class="absolute top-4 left-4"><span class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">09 / 09</span></div>
+            <div class="absolute top-4 left-4"><span
+                class="bg-blue-600/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">09
+                / 09</span></div>
           </div>
           <div class="mt-5 px-1">
-            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight" data-id="Cargo Carrying Unit" data-en="Cargo Carrying Unit">Cargo Carrying Unit</h3>
-            <p class="mt-3 text-slate-400 text-sm leading-relaxed" data-id="Fabrikasi unit pengangkut kargo (CCU) untuk operasi offshore, onshore, dan logistik industri berat. Memenuhi standar DNV / EN 12079 dengan kapasitas dan spesifikasi sesuai permintaan klien." data-en="Cargo Carrying Unit (CCU) fabrication for offshore, onshore, and heavy industrial logistics operations. Compliant with DNV / EN 12079 standards with capacity and specifications per client requirements.">
-              Fabrikasi unit pengangkut kargo (CCU) untuk operasi offshore, onshore, dan logistik industri berat. Memenuhi standar DNV / EN 12079 dengan kapasitas dan spesifikasi sesuai permintaan klien.
+            <h3 class="font-display font-extrabold text-3xl uppercase text-white tracking-tight"
+              data-id="Cargo Carrying Unit" data-en="Cargo Carrying Unit">Cargo Carrying Unit</h3>
+            <p class="mt-3 text-slate-400 text-sm leading-relaxed"
+              data-id="Fabrikasi unit pengangkut kargo (CCU) untuk operasi offshore, onshore, dan logistik industri berat. Memenuhi standar DNV / EN 12079 dengan kapasitas dan spesifikasi sesuai permintaan klien."
+              data-en="Cargo Carrying Unit (CCU) fabrication for offshore, onshore, and heavy industrial logistics operations. Compliant with DNV / EN 12079 standards with capacity and specifications per client requirements.">
+              Fabrikasi unit pengangkut kargo (CCU) untuk operasi offshore, onshore, dan logistik industri berat.
+              Memenuhi standar DNV / EN 12079 dengan kapasitas dan spesifikasi sesuai permintaan klien.
             </p>
             <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="CCU Offshore & Onshore" data-en="Offshore & Onshore CCU">CCU Offshore & Onshore</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Standar DNV / EN 12079" data-en="DNV / EN 12079 Standard">Standar DNV / EN 12079</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Sling & Lifting Arrangement" data-en="Sling & Lifting Arrangement">Sling & Lifting Arrangement</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Kapasitas SWL Custom" data-en="Custom SWL Capacity">Kapasitas SWL Custom</span></li>
-              <li class="flex items-center gap-2 text-slate-300 text-xs"><span class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span data-id="Certified & Third Party Inspection" data-en="Certified & Third Party Inspection">Certified & Third Party Inspection</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="CCU Offshore & Onshore" data-en="Offshore & Onshore CCU">CCU Offshore & Onshore</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Standar DNV / EN 12079" data-en="DNV / EN 12079 Standard">Standar DNV / EN 12079</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Sling & Lifting Arrangement" data-en="Sling & Lifting Arrangement">Sling & Lifting
+                  Arrangement</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Kapasitas SWL Custom" data-en="Custom SWL Capacity">Kapasitas SWL Custom</span></li>
+              <li class="flex items-center gap-2 text-slate-300 text-xs"><span
+                  class="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 flex-shrink-0">✓</span><span
+                  data-id="Certified & Third Party Inspection" data-en="Certified & Third Party Inspection">Certified &
+                  Third Party Inspection</span></li>
             </ul>
             <div class="mt-5 flex items-center gap-3">
-              <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
                 <span data-id="Konsultasi Sekarang" data-en="Consult Now">Konsultasi Sekarang</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
-              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam" data-en="Response within 24 hours">Respon dalam 24 jam</span>
+              <span class="text-slate-600 text-xs" data-id="Respon dalam 24 jam"
+                data-en="Response within 24 hours">Respon dalam 24 jam</span>
             </div>
           </div>
         </div>
@@ -405,9 +663,13 @@
 
     <!-- Mobile CTA -->
     <div class="lg:hidden mt-5">
-      <a href="#contact" class="flex items-center justify-center gap-2 w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-sm transition">
-        <span data-id="Butuh Solusi Custom? Diskusi Sekarang" data-en="Need Custom Solution? Discuss Now">Butuh Solusi Custom? Diskusi Sekarang</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      <a href="#contact"
+        class="flex items-center justify-center gap-2 w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-sm transition">
+        <span data-id="Butuh Solusi Custom? Diskusi Sekarang" data-en="Need Custom Solution? Discuss Now">Butuh Solusi
+          Custom? Diskusi Sekarang</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
       </a>
     </div>
 

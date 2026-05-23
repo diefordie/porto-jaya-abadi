@@ -1,27 +1,32 @@
-// ---- FAQ accordion ----
 function initFAQ() {
   document.querySelectorAll('.faq-toggle').forEach(btn => {
-    // Remove old listener if any
+
     const newBtn = btn.cloneNode(true);
     btn.parentNode.replaceChild(newBtn, btn);
 
     newBtn.addEventListener('click', () => {
-      const item = newBtn.parentElement;
+
+      const item = newBtn.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
       const wasOpen = item.classList.contains('active');
 
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      // Tutup semua FAQ
+      document.querySelectorAll('.faq-item').forEach(faq => {
+        faq.classList.remove('active');
 
-      // Open if not previously open
+        const panel = faq.querySelector('.faq-answer');
+        panel.style.maxHeight = null;
+      });
+
+      // Buka FAQ yang diklik
       if (!wasOpen) {
         item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
       }
     });
+
   });
 }
 
-// Bind to window
 window.initFAQ = initFAQ;
-
-// Fallback
 document.addEventListener('DOMContentLoaded', initFAQ);

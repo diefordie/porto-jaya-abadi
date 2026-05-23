@@ -10,7 +10,10 @@ const components = [
     { id: 'portfolio-placeholder', file: 'assets/components/portfolio.html' },
     { id: 'faq-placeholder', file: 'assets/components/faq.html' },
     { id: 'contact-placeholder', file: 'assets/components/contact.html' },
-    { id: 'footer-placeholder', file: 'assets/components/footer.html' }
+    { id: 'footer-placeholder', file: 'assets/components/footer.html' },
+    { id: 'pricing-placeholder', file: 'assets/components/pricing.html' },
+    { id: 'testimonials-placeholder', file: 'assets/components/testimonials.html' },
+    { id: 'why-us-placeholder', file: 'assets/components/why-us.html' }
 ];
 
 async function loadComponent(id, file) {

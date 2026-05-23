@@ -25,21 +25,49 @@ function filterPortfolio(filter) {
 }
 
 // ---- Contact form ----
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  const currentLang = window.currentLang || 'id';
-  if (btn) {
-    btn.textContent = currentLang === 'en' ? 'Sending...' : 'Mengirim...';
-    btn.disabled = true;
-    setTimeout(() => {
-      const successMsg = document.getElementById('form-success');
-      if (successMsg) successMsg.classList.remove('hidden');
-      e.target.reset();
-      btn.textContent = currentLang === 'en' ? 'Send Quote Request' : 'Kirim Permintaan Penawaran';
-      btn.disabled = false;
-    }, 1500);
+
+  const btn = e.target.querySelector(
+    'button[type="submit"]'
+  );
+
+  btn.disabled = true;
+  btn.textContent = 'Mengirim...';
+
+  const data = {
+    nama: document.getElementById('f-name').value,
+    perusahaan: document.getElementById('f-company').value,
+    email: document.getElementById('f-email').value,
+    wa: document.getElementById('f-wa').value,
+    layanan: document.getElementById('f-service').value,
+    lokasi: document.getElementById('f-location').value,
+    deskripsi: document.getElementById('f-desc').value
+  };
+
+  try {
+
+    await fetch(
+      'https://script.google.com/macros/s/AKfycbwSdkpYgugyRPdAgPUC_vLZzuWN3zL_oQlRpoLwOdWNHE95vAZESANEW9gzLF0gQjzX/exec',
+      {
+        method: 'POST',
+        body: JSON.stringify(data)
+      }
+    );
+
+    document
+      .getElementById('form-success')
+      .classList.remove('hidden');
+
+    e.target.reset();
+
+  } catch (err) {
+    alert('Gagal mengirim data');
   }
+
+  btn.disabled = false;
+  btn.textContent =
+    'Kirim Permintaan Penawaran';
 }
 
 // ---- Intersection Observer for bar animations ----
