@@ -9,11 +9,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap"
     rel="stylesheet">
-
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/animations.css">
-
   <style>
     .section-placeholder {
       min-height: 50vh;
@@ -21,7 +19,6 @@
       align-items: center;
       justify-content: center;
       background: #0f172a;
-      color: #1e293b;
     }
   </style>
 </head>
@@ -33,7 +30,6 @@
     class="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
 
-      <!-- Logo -->
       <a href="#home" class="flex items-center gap-3">
         <div
           class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-lg leading-none">
@@ -44,25 +40,22 @@
         </div>
       </a>
 
-      <!-- Desktop Nav -->
       <nav class="hidden lg:flex items-center gap-7 text-sm text-slate-300">
-        <a href="#services" class="nav-link hover:text-white transition" data-id="Services" data-en="Services"
-          data-id-text="Layanan">Layanan</a>
-        <a href="#about" class="nav-link hover:text-white transition" data-en="About"
-          data-id-text="Tentang Kami">Tentang Kami</a>
-        <a href="#portfolio" class="nav-link hover:text-white transition" data-en="Portfolio"
-          data-id-text="Portofolio">Portofolio</a>
-        <a href="#pricing" class="nav-link hover:text-white transition" data-en="Pricing" data-id-text="Harga">Harga</a>
-        <a href="#testimonials" class="nav-link hover:text-white transition" data-en="Reviews"
-          data-id-text="Testimoni">Testimoni</a>
-        <a href="#faq" class="nav-link hover:text-white transition" data-en="FAQ" data-id-text="FAQ">FAQ</a>
-        <a href="#contact" class="nav-link hover:text-white transition" data-en="Contact"
-          data-id-text="Kontak">Kontak</a>
+        <a href="#services" class="nav-link hover:text-white transition" data-id-text="Layanan"
+          data-en="Services">Layanan</a>
+        <a href="#about" class="nav-link hover:text-white transition" data-id-text="Tentang Kami"
+          data-en="About">Tentang Kami</a>
+        <a href="#portfolio" class="nav-link hover:text-white transition" data-id-text="Portofolio"
+          data-en="Portfolio">Portofolio</a>
+        <a href="#pricing" class="nav-link hover:text-white transition" data-id-text="Harga" data-en="Pricing">Harga</a>
+        <a href="#testimonials" class="nav-link hover:text-white transition" data-id-text="Testimoni"
+          data-en="Reviews">Testimoni</a>
+        <a href="#faq" class="nav-link hover:text-white transition" data-id-text="FAQ" data-en="FAQ">FAQ</a>
+        <a href="#contact" class="nav-link hover:text-white transition" data-id-text="Kontak"
+          data-en="Contact">Kontak</a>
       </nav>
 
-      <!-- Right Controls -->
       <div class="flex items-center gap-3">
-        <!-- Language Toggle -->
         <div class="hidden md:flex items-center bg-slate-800 rounded-full p-1 text-xs font-semibold">
           <button onclick="setLang('id')" id="btn-id"
             class="lang-btn active px-3 py-1 rounded-full transition">ID</button>
@@ -73,7 +66,6 @@
           class="hidden md:flex bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-full text-sm transition items-center gap-2">
           <span>Konsultasi Gratis</span>
         </a>
-        <!-- Hamburger -->
         <button id="menu-toggle" class="lg:hidden text-white p-2" onclick="toggleMenu()">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -82,7 +74,6 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu"
       class="hidden lg:hidden bg-slate-950 border-t border-white/10 px-6 py-4 space-y-3 text-sm text-slate-300">
       <a href="#services" class="block py-2 hover:text-white" onclick="toggleMenu()">Layanan</a>
@@ -101,7 +92,7 @@
     </div>
   </header>
 
-  <!-- Page Sections Placeholders -->
+  <!-- Placeholders -->
   <div id="home-placeholder" class="section-placeholder"></div>
   <div id="services-placeholder" class="section-placeholder"></div>
   <div id="why-us-placeholder" class="section-placeholder"></div>
@@ -113,33 +104,30 @@
   <div id="contact-placeholder" class="section-placeholder"></div>
   <div id="footer-placeholder" class="section-placeholder"></div>
 
-  <!-- Scripts -->
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/language.js"></script>
+  <script src="assets/js/services.js"></script>
+  <script src="assets/js/faq.js"></script>
+  <script src="assets/js/main.js"></script>
   <script src="assets/js/component-loader.js"></script>
-  <script src="assets/js/navbar.js" defer></script>
-  <script src="assets/js/language.js" defer></script>
-  <script src="assets/js/services.js" defer></script>
-  <script src="assets/js/faq.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
 
   <script>
-    // Re-initialize scripts after components are loaded
     window.addEventListener('componentsLoaded', () => {
-      console.log('All components loaded, initializing scripts...');
+      // Services: render tab + preview dari data JS
+      if (window.initServices) window.initServices();
 
-      // Trigger initial language set
-      if (window.setLang) {
-        window.setLang(window.currentLang || 'id');
-      }
+      // Language: terapkan bahasa aktif ke elemen baru
+      if (window.setLang) window.setLang(window.currentLang || 'id');
 
-      // Re-run any initialization needed from main.js
-      if (window.initMain) {
-        window.initMain();
-      }
-      if (window.initFAQ) {
-        window.initFAQ();
-      }
+      // Main: observer untuk animasi bar
+      if (window.initMain) window.initMain();
+
+      // FAQ: pasang event listener accordion
+      if (window.initFAQ) window.initFAQ();
     });
   </script>
+
 </body>
 
 </html>

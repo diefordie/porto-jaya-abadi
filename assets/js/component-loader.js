@@ -1,19 +1,14 @@
-/**
- * Component Loader
- * Dynamically fetches and injects HTML fragments into the DOM.
- */
-
 const components = [
     { id: 'home-placeholder', file: 'assets/components/hero.html' },
     { id: 'services-placeholder', file: 'assets/components/services.html' },
+    { id: 'why-us-placeholder', file: 'assets/components/why-us.html' },
     { id: 'about-placeholder', file: 'assets/components/about.html' },
     { id: 'portfolio-placeholder', file: 'assets/components/portfolio.html' },
+    { id: 'pricing-placeholder', file: 'assets/components/pricing.html' },
+    { id: 'testimonials-placeholder', file: 'assets/components/testimonials.html' },
     { id: 'faq-placeholder', file: 'assets/components/faq.html' },
     { id: 'contact-placeholder', file: 'assets/components/contact.html' },
     { id: 'footer-placeholder', file: 'assets/components/footer.html' },
-    { id: 'pricing-placeholder', file: 'assets/components/pricing.html' },
-    { id: 'testimonials-placeholder', file: 'assets/components/testimonials.html' },
-    { id: 'why-us-placeholder', file: 'assets/components/why-us.html' }
 ];
 
 async function loadComponent(id, file) {
@@ -28,13 +23,9 @@ async function loadComponent(id, file) {
 }
 
 async function loadAllComponents() {
-    // Load components sequentially or in parallel
-    const promises = components.map(comp => loadComponent(comp.id, comp.file));
-    await Promise.all(promises);
-
-    // Dispatch custom event when all components are loaded
+    await Promise.all(components.map(c => loadComponent(c.id, c.file)));
+    // Hanya fire event — biarkan index.html yang handle inisialisasi
     window.dispatchEvent(new CustomEvent('componentsLoaded'));
 }
 
-// Start loading
 loadAllComponents();

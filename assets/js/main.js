@@ -93,6 +93,8 @@ function initMain() {
   if (aboutSection) barObserver.observe(aboutSection);
 }
 
+
+
 // Bind to window for inline HTML access
 window.handleSubmit = handleSubmit;
 window.filterPortfolio = filterPortfolio;
