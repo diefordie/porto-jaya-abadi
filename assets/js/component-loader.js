@@ -13,7 +13,7 @@ const components = [
 
 async function loadComponent(id, file) {
     try {
-        const response = await fetch(file);
+        const response = await fetch(`${file}?t=${Date.now()}`);
         if (!response.ok) throw new Error(`Failed to load ${file}`);
         const html = await response.text();
         document.getElementById(id).outerHTML = html;

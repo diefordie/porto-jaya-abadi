@@ -72,6 +72,8 @@ async function handleSubmit(e) {
 
 // ---- Intersection Observer for bar animations ----
 let barObserver;
+let portfolioInterval;
+
 function initMain() {
   if (barObserver) barObserver.disconnect();
 
@@ -91,6 +93,149 @@ function initMain() {
 
   const aboutSection = document.getElementById('about');
   if (aboutSection) barObserver.observe(aboutSection);
+
+  // ---- Portfolio Slider ----
+
+  const slides = document.querySelectorAll('.portfolio-slide');
+  const dots = document.querySelectorAll('.portfolio-dot');
+
+  const prevBtn = document.querySelector('.portfolio-prev');
+  const nextBtn = document.querySelector('.portfolio-next');
+
+  let current = 0;
+  let sliderInterval;
+
+  // ---- Show Slide ----
+
+  function showSlide(index) {
+
+    slides.forEach((slide, i) => {
+
+      slide.classList.remove(
+        'translate-x-0',
+        'translate-x-full',
+        '-translate-x-full'
+      );
+
+      if (i === index) {
+
+        slide.classList.add('translate-x-0');
+
+      } else if (i < index) {
+
+        slide.classList.add('-translate-x-full');
+
+      } else {
+
+        slide.classList.add('translate-x-full');
+      }
+    });
+
+    // ---- Dots ----
+
+    dots.forEach((dot, i) => {
+
+      if (i === index) {
+
+        dot.classList.remove(
+          'bg-white/30',
+          'w-2',
+          'md:w-3'
+        );
+
+        dot.classList.add(
+          'bg-white',
+          'w-8',
+          'md:w-10'
+        );
+
+      } else {
+
+        dot.classList.remove(
+          'bg-white',
+          'w-8',
+          'md:w-10'
+        );
+
+        dot.classList.add(
+          'bg-white/30',
+          'w-2',
+          'md:w-3'
+        );
+      }
+    });
+
+    current = index;
+  }
+
+  // ---- Next ----
+
+  function nextSlide() {
+
+    current++;
+
+    if (current >= slides.length) {
+      current = 0;
+    }
+
+    showSlide(current);
+  }
+
+  // ---- Prev ----
+
+  function prevSlide() {
+
+    current--;
+
+    if (current < 0) {
+      current = slides.length - 1;
+    }
+
+    showSlide(current);
+  }
+
+  // ---- Auto Slide ----
+
+  function startSlider() {
+
+    clearInterval(sliderInterval);
+
+    sliderInterval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+  }
+
+  // ---- Events ----
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startSlider();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startSlider();
+    });
+  }
+
+  if (dots && dots.length > 0) {
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        startSlider();
+      });
+    });
+  }
+
+  // ---- Init ----
+
+  if (slides && slides.length > 0) {
+    showSlide(0);
+    startSlider();
+  }
 }
 
 
